@@ -7,12 +7,21 @@ Obviously this setup works for me, a JavaScript developer on macOS, but this par
 
 ## Contents
 
-+ [Initial Setup and Installation](#initial-setup-and-installation)
-+ [ZSH Setup](#zsh-setup)
-+ [Prompt](#prompt)
-+ [Vim and Neovim Setup](#vim-and-neovim-setup)
-+ [Fonts](#fonts)
-+ [Tmux](#tmux-configuration)
+- [Dotfiles](#dotfiles)
+  - [Contents](#contents)
+  - [Initial Setup and Installation](#initial-setup-and-installation)
+    - [Backup](#backup)
+    - [Installation](#installation)
+  - [ZSH Setup](#zsh-setup)
+    - [Prompt](#prompt)
+      - [Git Prompt](#git-prompt)
+      - [Jobs Prompt](#jobs-prompt)
+      - [Node Prompt](#node-prompt)
+  - [Vim and Neovim Setup](#vim-and-neovim-setup)
+    - [Installation](#installation-1)
+  - [Fonts](#fonts)
+  - [Tmux Configuration](#tmux-configuration)
+  - [Questions](#questions)
 
 ## Initial Setup and Installation
 
@@ -35,7 +44,7 @@ If on OSX, you will need to install the XCode CLI tools before continuing. To do
 Then, clone the dotfiles repository to your home directory as `~/.dotfiles`. 
 
 ```bash
-➜ git clone https://github.com/nicknisi/dotfiles.git ~/.dotfiles
+➜ git clone https://github.com/johnplummer/dotfiles.git ~/.dotfiles
 ➜ cd ~/.dotfiles
 ➜ ./install.sh
 ```

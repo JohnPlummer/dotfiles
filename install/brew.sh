@@ -9,32 +9,18 @@ echo -e "\\n\\nInstalling homebrew packages..."
 echo "=============================="
 
 formulas=(
-    bat
-    diff-so-fancy
-    dnsmasq
-    fzf
     git
+    golang
     grep
-    highlight
-    hub
-    markdown
-    mas
     neovim
     python
-    reattach-to-user-namespace
-    the_silver_searcher
-    shellcheck
+    rbenv
+    ruby-build
     tmux
-    trash
     tree
     wget
     vim
-    z
     zsh
-    ripgrep
-    git-standup
-    entr
-    yarn
 )
 
 for formula in "${formulas[@]}"; do
@@ -45,15 +31,6 @@ for formula in "${formulas[@]}"; do
         brew install "$formula"
     fi
 done
-
-# Install fnm from the creator's custom tap until it's merged into main.
-# fast node manager https://github.com/Schniz/fnm
-brew install Schniz/tap/fnm
-
-# After the install, setup fzf
-echo -e "\\n\\nRunning fzf install script..."
-echo "=============================="
-/usr/local/opt/fzf/install --all --no-bash --no-fish
 
 # after the install, install neovim python libraries
 echo -e "\\n\\nRunning Neovim Python install"

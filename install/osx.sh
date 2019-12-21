@@ -3,20 +3,20 @@
 echo -e "\\n\\nSetting OS X settings"
 echo "=============================="
 
-# echo "Finder: show all filename extensions"
+echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # echo "show hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
-# echo "only use UTF-8 in Terminal.app"
+echo "only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
 # echo "expand save dialog by default"
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # echo "show the ~/Library folder in Finder"
-chflags nohidden ~/Library
+# chflags nohidden ~/Library
 
 # echo "disable resume system wide"
 # defaults write NSGlobalDomainNSQuitAlwaysKeepWindows -bool false
@@ -30,11 +30,11 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # echo "Enable the 2D Dock"
 # defaults write com.apple.dock no-glass -bool true
 
-# Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
+Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
 
-# echo "Make Dock icons of hidden applications translucent"
-# defaults write com.apple.dock showhidden -bool true
+echo "Make Dock icons of hidden applications translucent"
+defaults write com.apple.dock showhidden -bool true
 
 #echo "Enable iTunes track notifications in the Dock"
 #defaults write com.apple.dock itunes-notifications -bool true
@@ -46,8 +46,8 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 # defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
-# echo "Always show scrollbars"
-# defaults write NSGlobalDomain AppleShowScrollBars -string "Auto"
+echo "Always show scrollbars"
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 #echo "Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"
 #defaults write com.apple.finder QuitMenuItem -bool true
@@ -55,8 +55,8 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Disable window animations and Get Info animations in Finder
 # defaults write com.apple.finder DisableAllAnimations -bool true
 
-echo "Use current directory as default search scope in Finder"
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# echo "Use current directory as default search scope in Finder"
+# defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 echo "Show Path bar in Finder"
 defaults write com.apple.finder ShowPathbar -bool true
@@ -76,11 +76,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # echo "Enable highlight hover effect for the grid view of a stack (Dock)"
 # defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
-# echo "Enable spring loading for all Dock items"
-# defaults write enable-spring-load-actions-on-all-items -bool true
+echo "Enable spring loading for all Dock items"
+defaults write enable-spring-load-actions-on-all-items -bool true
 
-# echo "Show indicator lights for open applications in the Dock"
-# defaults write com.apple.dock show-process-indicators -bool true
+echo "Show indicator lights for open applications in the Dock"
+defaults write com.apple.dock show-process-indicators -bool true
 
 # Don’t animate opening applications from the Dock
 # defaults write com.apple.dock launchanim -bool false
@@ -120,8 +120,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Increase window resize speed for Cocoa applications
 # defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
-# echo "Avoid creating .DS_Store files on network volumes"
-# defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+echo "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # echo "Disable the warning when changing a file extension"
 # defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -132,8 +132,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # echo "Enable snap-to-grid for desktop icons"
 # /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# echo "Disable the warning before emptying the Trash"
-# defaults write com.apple.finder WarnOnEmptyTrash -bool false
+echo "Disable the warning before emptying the Trash"
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
 # defaults write com.apple.finder EmptyTrashSecurely -bool true
@@ -142,8 +142,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 #defaults write com.apple.screensaver askForPassword -int 1
 #defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-echo "Enable tap to click (Trackpad)"
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+# echo "Enable tap to click (Trackpad)"
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
 #echo "Map bottom right Trackpad corner to right-click"
 #defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2

@@ -38,16 +38,15 @@ fi
 autoload -U compinit add-zsh-hook
 compinit
 
-prepend_path $HOME/npmbin/node_modules/.bin
-prepend_path /usr/local/opt/grep/libexec/gnubin
 prepend_path /usr/local/sbin
 prepend_path $DOTFILES/bin
+prepend_path $HOME/Dropbox/bin
 prepend_path $HOME/bin
 
 # define the code directory
 # This is where my code exists and where I want the `c` autocomplete to work from exclusively
-if [[ -d ~/code ]]; then
-    export CODE_DIR=~/code
+if [[ -d ~/Dropbox/code ]]; then
+    export CODE_DIR=~/Dropbox/code
 fi
 
 # display how long all tasks over 10 seconds take
@@ -155,6 +154,23 @@ if hash brew 2>/dev/null; then
 fi
 
 ########################################################
+# Ruby
+########################################################
+
+# Load rbenv automatically
+
+eval "$(rbenv init -)"
+
+########################################################
+# Golang
+########################################################
+
+# Install tools to ~/golib
+export GOPATH=$HOME/golib
+prepend_path $GOPATH/bin
+export GOPATH=$GOPATH:$HOME/Dropbox/code/home/go:$HOME/Dropbox/code/deliveroo/go
+
+########################################################
 # Aliases
 ########################################################
 
@@ -177,6 +193,9 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias cdh='cd ~/Dropbox/code/home'
+alias cdgh='cd ~/Dropbox/code/home/go/src/github.com/johnplummer'
+
 alias l="ls -lah ${colorflag}"
 alias la="ls -AF ${colorflag}"
 alias ll="ls -lFh ${colorflag}"
@@ -188,13 +207,6 @@ alias grep='grep --color=auto'
 alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
-# Applications
-alias ios='open -a /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 # remove broken symlinks
@@ -203,9 +215,31 @@ alias clsym="find -L . -name . -o -type d -prune -o -type l -exec rm {} +"
 # git aliases
 alias gs='git s'
 alias glog="git l"
+alias gho="git open"
+alias grbom="git fetch && git rebase origin/master"
 
 # tmux aliases
 alias ta='tmux attach'
 alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
+
+# config aliases
+alias zshconfig="code ~/.zshrc"
+alias gitconfig="code ~/.gitconfig"
+alias vimconfig="code ~/.vimrc"
+alias rubocopconfig="code ~/.rubocop.yml"
+
+# work aliases
+alias cdgw='cd ~/Dropbox/code/deliveroo/go/src/github.com/deliveroo'
+alias cdw='cd ~/Dropbox/code/deliveroo'
+alias shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner bundle exec rails c"
+alias ssh-shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner sh"
+alias os-staging="ssh ecs@hopper-staging order-status web hopper-runner bundle exec rails c"
+alias os-production="ssh ecs@hopper-production order-status web hopper-runner bundle exec rails c"
+alias cca-staging="ssh ecs@hopper-staging contact-center-api web hopper-runner bundle exec rails c"
+alias ssh-cca-staging="ssh ecs@hopper-staging contact-center-api web hopper-runner sh"
+alias ssh-cca-production="ssh ecs@hopper-production contact-center-api web hopper-runner sh"
+
+# Staging reset script
+export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc

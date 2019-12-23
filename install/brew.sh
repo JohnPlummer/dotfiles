@@ -20,6 +20,7 @@ formulas=(
     tree
     wget
     vim
+    z
     zsh
 )
 

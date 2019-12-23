@@ -53,18 +53,20 @@ Then, clone the dotfiles repository to your home directory as `~/.dotfiles`.
 
 Next, the install script will perform a check to see if it is running on an OSX machine. If so, it will install Homebrew if it is not currently installed and will install the homebrew packages listed in [`brew.sh`](install/brew.sh). Then, it will run [`osx.sh`](install/osx.sh) and change some OSX configurations. This file is pretty well documented and so it is advised that you __read through and comment out any changes you do not want__. Next, nginx (installed from Homebrew) will be configured with the provided configuration file. If a `nginx.conf` file already exists in `/usr/local/etc`, a backup will be made at `/usr/local/etc/nginx/nginx.conf.original`.
 
+Finally install [additional apps](https://docs.google.com/spreadsheets/d/16eFobpA2NCv6kvn_EGDvvYnCeUiotT8SwyTWuxP5CXc)
+
 ## ZSH Setup
 
 ZSH is configured in the `zshrc.symlink` file, which will be symlinked to the home directory. The following occurs in this file:
 
-* set the `EDITOR` to nvim
-* Load any `~/.terminfo` setup
-* Set the `CODE_DIR` variable, pointing to the location where the code projects exist for exclusive autocompletion with the `c` command
-* Recursively search the `$DOTFILES/zsh` directory for files ending in .zsh and source them
-* Setup zplug plugin manager for zsh plugins and installed them.
-* source a `~/.localrc` if it exists so that additional configurations can be made that won't be kept track of in this dotfiles repo. This is good for things like API keys, etc.
-* Add the `~/bin` and `$DOTFILES/bin` directories to the path
-* And more...
+- Set the `EDITOR` to nvim
+- Load any `~/.terminfo` setup
+- Set the `CODE_DIR` variable, pointing to the location where the code projects exist for exclusive autocompletion with the `c` command
+- Recursively search the `$DOTFILES/zsh` directory for files ending in .zsh and source them
+- Setup zplug plugin manager for zsh plugins and installed them.
+- Source a `~/.localrc` if it exists so that additional configurations can be made that won't be kept track of in this dotfiles repo. This is good for things like API keys, etc.
+- Add the `~/bin` and `$DOTFILES/bin` directories to the path
+- And more...
 
 ### Prompt
 
@@ -78,17 +80,17 @@ It does this by writing the actual text that will be displayed int he prompt to 
 
 The git info shown on the `RPROMPT` displays the current branch name, along with the following symbols.
 
--  `+` - New files were added
--  `!` - Existing files were modified
--  `?` - Untracked files exist that are not ignored
--  `»` - Current changes include file renaming
--  `✘` - An existing tracked file has been deleted
--  `$` - There are currently stashed files
--  `=` - There are unmerged files
--  `⇡` - Branch is ahead of the remote (indicating a push is needed)
--  `⇣` - Branch is behind the remote (indicating a pull is needed)
--  `⇕` - The branches have diverged (indicating history has changed and maybe a force-push is needed)
--  `✔` - The current working directory is clean
+- `+` - New files were added
+- `!` - Existing files were modified
+- `?` - Untracked files exist that are not ignored
+- `»` - Current changes include file renaming
+- `✘` - An existing tracked file has been deleted
+- `$` - There are currently stashed files
+- `=` - There are unmerged files
+- `⇡` - Branch is ahead of the remote (indicating a push is needed)
+- `⇣` - Branch is behind the remote (indicating a pull is needed)
+- `⇕` - The branches have diverged (indicating history has changed and maybe a force-push is needed)
+- `✔` - The current working directory is clean
 
 #### Jobs Prompt
 

@@ -36,6 +36,9 @@ else
     export TERM=tmux-256color-italic
 fi
 
+# Neovim folders
+export VIMCONFIG=~/.config/nvim
+export VIMDATA=~/.local/share/nvim
 
 # initialize autocomplete
 autoload -U compinit add-zsh-hook

@@ -65,6 +65,9 @@ setopt LOCAL_OPTIONS
 setopt LOCAL_TRAPS
 setopt PROMPT_SUBST
 
+# exclude git ignored files from fzf
+export FZF_DEFAULT_COMMAND='rg --files'
+
 # history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -125,9 +128,6 @@ fi
 # add a config file for ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
 
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # alias git to hub
 if type hub > /dev/null 2>&1; then

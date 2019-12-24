@@ -9,12 +9,14 @@ echo -e "\\n\\nInstalling homebrew packages..."
 echo "=============================="
 
 formulas=(
+    fzf
     git
     golang
     grep
     neovim
     python
     rbenv
+    ripgrep
     ruby-build
     tmux
     tree

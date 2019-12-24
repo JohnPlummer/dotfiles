@@ -180,8 +180,11 @@ else # macOS `ls`
     colorflag="-G"
 fi
 
-# use nvim, but don't make me think about it
+# Use Neovim as "preferred editor"
+export VISUAL=nvim
+# Use Neovim instead of Vim or Vi
 alias vim="nvim"
+alias vi="nvim"
 
 # Filesystem aliases
 alias ..='cd ..'
@@ -221,10 +224,10 @@ alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 
 # config aliases
-alias zshconfig="code ~/.zshrc"
-alias gitconfig="code ~/.gitconfig"
-alias vimconfig="code ~/.vimrc"
-alias rubocopconfig="code ~/.rubocop.yml"
+alias zshconfig="vim ~/.zshrc"
+alias gitconfig="vim ~/.gitconfig"
+alias vimconfig="vim ~/.vimrc"
+alias rubocopconfig="vim ~/.rubocop.yml"
 
 # work aliases
 alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'

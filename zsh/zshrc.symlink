@@ -164,7 +164,7 @@ eval "$(rbenv init -)"
 # Install tools to ~/golib
 export GOPATH=$HOME/golib
 prepend_path $GOPATH/bin
-export GOPATH=$GOPATH:$HOME/Dropbox/code/home/go:$HOME/Dropbox/code/deliveroo/go
+export GOPATH=$GOPATH:$CODE_DIR/home/go:$CODE_DIR/deliveroo/go
 
 ########################################################
 # Aliases
@@ -189,8 +189,8 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias cdh='cd ~/Dropbox/code/home'
-alias cdgh='cd ~/Dropbox/code/home/go/src/github.com/johnplummer'
+alias cdh='cd $CODE_DIR/home'
+alias cdgh='cd $CODE_DIR/home/go/src/github.com/johnplummer'
 
 alias l="ls -lah ${colorflag}"
 alias la="ls -AF ${colorflag}"
@@ -227,8 +227,8 @@ alias vimconfig="code ~/.vimrc"
 alias rubocopconfig="code ~/.rubocop.yml"
 
 # work aliases
-alias cdgw='cd ~/Dropbox/code/deliveroo/go/src/github.com/deliveroo'
-alias cdw='cd ~/Dropbox/code/deliveroo'
+alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'
+alias cdw='cd $CODE_DIR/deliveroo'
 alias shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner bundle exec rails c"
 alias ssh-shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner sh"
 alias os-staging="ssh ecs@hopper-staging order-status web hopper-runner bundle exec rails c"

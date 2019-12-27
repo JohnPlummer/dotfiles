@@ -15,3 +15,4 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 
+:imap eu <Esc>

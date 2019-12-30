@@ -2,19 +2,19 @@
 
 Welcome to my world. This is a collection of vim, tmux, and zsh configurations. Interested in a video walkthrough of the dotfiles? Check out my talk, [vim + tmux](https://www.youtube.com/watch?v=5r6yzFEXajQ).
 
-Obviously this setup works for me, a JavaScript developer on macOS, but this particular setup may not work for you. If this particular setup doesn't work for you, please steal ideas from this and if you like, contribute back tips, tricks, and other tidbits via Pull Requests if you like!
+	Obviously this setup works for me, a JavaScript developer on macOS, but this particular setup may not work for you. If this particular setup doesn't work for you, please steal ideas from this and if you like, contribute back tips, tricks, and other tidbits via Pull Requests if you like!
 ![A screenshot of the dotfiles setup](screenshot.png)
 
 ## Contents
 
-- [Dotfiles](#dotfiles)
-  - [Contents](#contents)
-  - [Initial Setup and Installation](#initial-setup-and-installation)
-    - [Backup](#backup)
-    - [Installation](#installation)
-  - [ZSH Setup](#zsh-setup)
-    - [Prompt](#prompt)
-      - [Git Prompt](#git-prompt)
+	- [Dotfiles](#dotfiles)
+	- [Contents](#contents)
+	- [Initial Setup and Installation](#initial-setup-and-installation)
+	- [Backup](#backup)
+	- [Installation](#installation)
+	- [ZSH Setup](#zsh-setup)
+	- [Prompt](#prompt)
+	- [Git Prompt](#git-prompt)
       - [Jobs Prompt](#jobs-prompt)
       - [Node Prompt](#node-prompt)
   - [Vim and Neovim Setup](#vim-and-neovim-setup)
@@ -44,7 +44,7 @@ If on OSX, you will need to install the XCode CLI tools before continuing. To do
 Then, clone the dotfiles repository to your home directory as `~/.dotfiles`. 
 
 ```bash
-➜ git clone https://github.com/johnplummer/dotfiles.git ~/.dotfiles
+➜ git clone git@github.com:johnplummer/dotfiles.git ~/.dotfiles
 ➜ cd ~/.dotfiles
 ➜ ./install.sh
 ```

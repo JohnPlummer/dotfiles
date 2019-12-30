@@ -5,6 +5,8 @@
 	signingkey = 21863237ECE91781
 [github]
 	user = JohnPlummer
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim

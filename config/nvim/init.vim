@@ -5,6 +5,9 @@ filetype plugin indent on
 " Disable ex mode
 nnoremap Q :
 
+" Line numbers
+set number relativenumber
+
 " Plugins
 packadd minpac
 call minpac#init()

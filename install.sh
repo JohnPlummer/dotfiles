@@ -22,6 +22,10 @@ fi
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
 
+echo "installing minpac"
+mkdir -p ~/.config/nvim/pack/minpac/opt
+git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac
+
 if ! command_exists zsh; then
     echo "zsh not found. Please install and then re-run installation scripts"
     exit 1

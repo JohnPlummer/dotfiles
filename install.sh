@@ -26,6 +26,10 @@ echo "installing minpac"
 mkdir -p ~/.config/nvim/pack/minpac/opt
 git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac
 
+echo "compiling terminal info"
+tic resources/xterm-256color-italic.terminfo
+tic resources/tmux-256color-italic.terminfo
+
 if ! command_exists zsh; then
     echo "zsh not found. Please install and then re-run installation scripts"
     exit 1

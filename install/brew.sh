@@ -14,6 +14,7 @@ formulas=(
     golang
     grep
     neovim
+    prettier
     python
     rbenv
     ripgrep
@@ -22,6 +23,7 @@ formulas=(
     tree
     wget
     vim
+    yarn
     z
     zsh
 )

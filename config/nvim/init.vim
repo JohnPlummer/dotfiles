@@ -2,6 +2,9 @@
 set nocompatible
 filetype plugin indent on
 
+" Disable ex mode
+nnoremap Q :
+
 " Plugins
 packadd minpac
 call minpac#init()

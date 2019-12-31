@@ -24,6 +24,9 @@ command! PackClean call minpac#clean()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
+" Vinegar
+call minpac#add('tpope/vim-vinegar')
+
 " FZF
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :<C-u>FZF<CR>

@@ -1,18 +1,18 @@
 # gitconfig
 [user]
-	name = John Plummer
-	email = john@memphis.co.uk
-	signingkey = 21863237ECE91781
+    name = John Plummer
+    email = john@memphis.co.uk
+    signingkey = 21863237ECE91781
 [github]
-	user = JohnPlummer
+    user = JohnPlummer
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
 [rebase]
-	instructionFormat = "[%an - %ar] %s"
-	autoStash = true
+    instructionFormat = "[%an - %ar] %s"
+    autoStash = true
 [push]
     # push will only do the current branch, not all branches
     default = current
@@ -22,11 +22,11 @@
 [pull]
     rebase = true
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+    program = /usr/local/bin/gpg
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
@@ -38,21 +38,23 @@
     la = "!git config -l | grep alias | cut -c 7-"
 
     st = status
-	ci = commit
-	co = checkout
+    ci = commit
+    cim = commit -m
+    co = checkout
     cob = checkout -b
-	di = diff
-	dc = diff --cached
-	amend = commit --amend
-	aa = add --all
-	ff = merge --ff-only
-	pullff = pull --ff-only
-	pro = pull --rebase origin
-	noff = merge --no-ff
-	fa = fetch --all
-	pa = push --all
-	pt = push --tags
-	b = branch
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    aa = add --all
+    ai = add --interactive
+    ff = merge --ff-only
+    pullff = pull --ff-only
+    pro = pull --rebase origin
+    noff = merge --no-ff
+    fa = fetch --all
+    pa = push --all
+    pt = push --tags
+    b = branch
     
     # open in github
     open = !sh -c "ls > /dev/null;open `git remote -v | grep fetch | awk '{print $2}' | sed 's|git@|http://|' | sed 's|com:|com/|' | head -n1`"

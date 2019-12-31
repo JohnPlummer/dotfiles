@@ -2,6 +2,9 @@
 set nocompatible
 filetype plugin indent on
 
+" map jk to esc
+map! jk <Esc>
+
 " change the mapleader from \ to ,
 let mapleader=","
 
@@ -31,7 +34,6 @@ call minpac#add('tpope/vim-vinegar')
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 
-:imap eu <Esc>
 
 " ALE for linting
 call minpac#add('dense-analysis/ale')

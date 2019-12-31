@@ -2,6 +2,13 @@
 set nocompatible
 filetype plugin indent on
 
+" change the mapleader from \ to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
 " Disable ex mode
 nnoremap Q :
 

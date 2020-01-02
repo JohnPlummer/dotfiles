@@ -18,6 +18,9 @@ nnoremap Q :
 " Line numbers
 set number relativenumber
 
+" Make the cursor actually visible
+set cursorline
+
 " Plugins
 packadd minpac
 call minpac#init()

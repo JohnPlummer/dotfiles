@@ -47,10 +47,12 @@ let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \  'markdown': ['prettier'],
 \ 'javascript': ['eslint'],
+\ 'go': ['golint', 'gofmt'],
 \}
 let g:ale_fixers = {
 \   'markdown': ['prettier'],
 \   'javascript': ['prettier'],
+\   'go': ['gofmt'],
 \}
 " Mappings in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)

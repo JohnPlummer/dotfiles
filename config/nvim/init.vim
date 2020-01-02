@@ -31,8 +31,10 @@ command! PackClean call minpac#clean()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-" Vinegar
+" Random Tim Pope plugins
+call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-vinegar')
+call minpac#add('tpope/vim-repeat')
 
 " FZF
 set rtp+=/usr/local/opt/fzf

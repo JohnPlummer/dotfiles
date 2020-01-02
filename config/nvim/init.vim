@@ -3,7 +3,8 @@ set nocompatible
 filetype plugin indent on
 
 " map jk to esc
-map! jk <Esc>
+noremap! jk <Esc>
+vnoremap jk <Esc>
 
 " change the mapleader from \ to ,
 let mapleader=","

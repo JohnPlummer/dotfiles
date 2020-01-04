@@ -9,6 +9,9 @@ vnoremap jk <Esc>
 " change the mapleader from \ to ,
 let mapleader=","
 
+" Use the system clipboard
+set clipboard+=unnamedplus
+
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>

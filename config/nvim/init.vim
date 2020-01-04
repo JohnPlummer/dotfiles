@@ -39,6 +39,12 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-vinegar')
 call minpac#add('tpope/vim-repeat')
 
+" NerdCommenter
+call minpac#add('preservim/nerdcommenter')
+let g:NERDSpaceDelims = 1 " Add space after delimiter
+let g:NERDDefaultAlign = 'left' " Left align delimiters
+let g:NERDCommentEmptyLines = 1 " Also comment empty lines
+
 " FZF
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :<C-u>FZF<CR>

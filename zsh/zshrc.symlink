@@ -241,5 +241,5 @@ alias ssh-cca-production="ssh ecs@hopper-production contact-center-api web hoppe
 export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc
 
 # source .localrc for stuff that should not be commited (this should be last)
-source ~./localrc
+source ~/.localrc
 

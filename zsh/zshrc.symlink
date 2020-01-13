@@ -237,9 +237,12 @@ alias cca-staging="ssh ecs@hopper-staging contact-center-api web hopper-runner b
 alias ssh-cca-staging="ssh ecs@hopper-staging contact-center-api web hopper-runner sh"
 alias ssh-cca-production="ssh ecs@hopper-production contact-center-api web hopper-runner sh"
 
+# work projects (used in Alfred workflow `it ...`)
+alias shs='cd $CODE_DIR/deliveroo/self-help-service'
+alias contact='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo/contact-context'
+
 # Staging reset script
 export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc
 
 # source .localrc for stuff that should not be commited (this should be last)
 source ~/.localrc
-

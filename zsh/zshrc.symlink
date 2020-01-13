@@ -142,9 +142,13 @@ export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
 export LESS_TERMCAP_mr=$(tput rev)
 export LESS_TERMCAP_mh=$(tput dim)
 
+# z
 if hash brew 2>/dev/null; then
     source `brew --prefix`/etc/profile.d/z.sh
 fi
+
+# broot
+source /Users/johnplummer/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 ########################################################
 # Ruby

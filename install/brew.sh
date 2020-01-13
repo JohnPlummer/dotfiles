@@ -9,6 +9,7 @@ echo -e "\\n\\nInstalling homebrew packages..."
 echo "=============================="
 
 formulas=(
+    broot
     fzf
     git
     golang

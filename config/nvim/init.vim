@@ -16,6 +16,9 @@ set clipboard+=unnamedplus
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Buffer management
+:nnoremap <leader>b :buffers<CR>:buffer<Space>
+
 " Disable ex mode
 nnoremap Q :
 

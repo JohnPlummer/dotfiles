@@ -148,7 +148,7 @@ if hash brew 2>/dev/null; then
 fi
 
 # broot
-source /Users/johnplummer/Library/Preferences/org.dystroy.broot/launcher/bash/br
+source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 ########################################################
 # Ruby
@@ -250,3 +250,5 @@ export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc
 
 # source .localrc for stuff that should not be commited (this should be last)
 source ~/.localrc
+
+source /Users/jp/Library/Preferences/org.dystroy.broot/launcher/bash/br

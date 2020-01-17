@@ -28,6 +28,12 @@ set number relativenumber
 " Make the cursor actually visible
 set cursorline
 
+" Wordwrap
+set wrap linebreak nolist
+
+" Open markdown files with Chrome.
+autocmd BufEnter *.md exe 'noremap <leader>p :!open -a "Google Chrome.app" %:p<CR>'
+
 " Plugins
 packadd minpac
 call minpac#init()
@@ -66,6 +72,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'go': ['gofmt'],
 \}
+
 " Mappings in the style of unimpaired-next
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)

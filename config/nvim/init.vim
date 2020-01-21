@@ -31,9 +31,6 @@ set cursorline
 " Wordwrap
 set wrap linebreak nolist
 
-" Open markdown files with Chrome.
-autocmd BufEnter *.md exe 'noremap <leader>p :!open -a "Google Chrome.app" %:p<CR>'
-
 " Plugins
 packadd minpac
 call minpac#init()
@@ -58,6 +55,15 @@ let g:NERDCommentEmptyLines = 1 " Also comment empty lines
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :<C-u>FZF<CR>
 
+" Markdown
+call minpac#add('godlygeek/tabular')
+call minpac#add('plasticboy/vim-markdown')
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_toc_autofit = 1
+set conceallevel=2
+
+call minpac#add('iamcco/markdown-preview.nvim') " :call mkdp#util#install()
+nmap <leader>p <Plug>MarkdownPreview
 
 " ALE for linting
 call minpac#add('dense-analysis/ale')

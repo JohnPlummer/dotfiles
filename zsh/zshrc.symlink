@@ -37,8 +37,8 @@ else
 fi
 
 # Neovim folders
-export VIMCONFIG=~/.config/nvim
-export VIMDATA=~/.local/share/nvim
+export VIMCONFIG=$HOME/.config/nvim
+export VIMDATA=$HOME/.local/share/nvim
 
 # initialize autocomplete
 autoload -U compinit add-zsh-hook
@@ -51,8 +51,8 @@ prepend_path $HOME/bin
 
 # define the code directory
 # This is where my code exists and where I want the `c` autocomplete to work from exclusively
-if [[ -d ~/Dropbox/code ]]; then
-    export CODE_DIR=~/Dropbox/code
+if [[ -d $HOME/Dropbox/code ]]; then
+    export CODE_DIR=$HOME/Dropbox/code
 fi
 
 # display how long all tasks over 10 seconds take
@@ -69,7 +69,7 @@ setopt PROMPT_SUBST
 export FZF_DEFAULT_COMMAND='rg --files'
 
 # history
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt EXTENDED_HISTORY
@@ -106,14 +106,14 @@ zfetch $ZPLUGDIR zsh-users/zsh-syntax-highlighting
 zfetch $ZPLUGDIR zsh-users/zsh-autosuggestions
 zfetch $ZPLUGDIR chriskempson/base16-shell
 
-[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
+[[ -e $HOME/.terminfo ]] && export TERMINFO_DIRS=$HOME/.terminfo:/usr/share/terminfo
 
 ########################################################
 # Setup
 ########################################################
 
-if [[ -a ~/.localrc ]]; then
-    source ~/.localrc
+if [[ -a $HOME/.localrc ]]; then
+    source $HOME/.localrc
 fi
 
 # add a config file for ripgrep
@@ -162,7 +162,7 @@ eval "$(rbenv init -)"
 # Golang
 ########################################################
 
-# Install tools to ~/golib
+# Install tools to $HOME/golib
 export GOPATH=$HOME/golib
 prepend_path $GOPATH/bin
 export GOPATH=$GOPATH:$CODE_DIR/home/go:$CODE_DIR/deliveroo/go
@@ -172,7 +172,7 @@ export GOPATH=$GOPATH:$CODE_DIR/home/go:$CODE_DIR/deliveroo/go
 ########################################################
 
 # reload zsh config
-alias reload!='RELOAD=1 source ~/.zshrc'
+alias reload!='RELOAD=1 source $HOME/.zshrc'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -225,10 +225,10 @@ alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 
 # config aliases
-alias zshconfig="vim ~/.zshrc"
-alias gitconfig="vim ~/.gitconfig"
-alias vimconfig="vim ~/.vimrc"
-alias rubocopconfig="vim ~/.rubocop.yml"
+alias zshconfig="vim $HOME/.zshrc"
+alias gitconfig="vim $HOME/.gitconfig"
+alias vimconfig="vim $HOME/.vimrc"
+alias rubocopconfig="vim $HOME/.rubocop.yml"
 
 # work aliases
 alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'
@@ -249,6 +249,6 @@ alias contact='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo/contact-contex
 export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc
 
 # source .localrc for stuff that should not be commited (this should be last)
-source ~/.localrc
+source $HOME/.localrc
 
-source /Users/jp/Library/Preferences/org.dystroy.broot/launcher/bash/br
+source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br

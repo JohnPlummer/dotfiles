@@ -31,6 +31,10 @@ set cursorline
 " Wordwrap
 set wrap linebreak nolist
 
+" Spelling
+nnoremap <silent> <leader>s :set spell! spelllang=en_gb<CR>
+set spellfile=$HOME/Dropbox/Config/vim/spell/en.utf-8.add
+
 " Plugins
 packadd minpac
 call minpac#init()

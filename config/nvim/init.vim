@@ -57,8 +57,15 @@ let g:NERDDefaultAlign = 'left' " Left align delimiters
 let g:NERDCommentEmptyLines = 1 " Also comment empty lines
 
 " FZF
+call minpac#add('junegunn/fzf.vim')
 set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-b> :Buffers<CR>
+nnoremap <C-t> :Tags<CR>
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R -f ./.git/tags .'
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
 
 " Markdown
 call minpac#add('godlygeek/tabular')

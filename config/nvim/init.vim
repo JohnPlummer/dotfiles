@@ -48,6 +48,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-vinegar')
 call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-fugitive')
 
 " NerdCommenter
 call minpac#add('preservim/nerdcommenter')

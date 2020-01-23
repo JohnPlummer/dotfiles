@@ -16,8 +16,8 @@ set clipboard+=unnamedplus
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" Buffer management
-:nnoremap <leader>b :buffers<CR>:buffer<Space>
+" Current path to clipboard
+nnoremap <silent> <leader>cp :let @+=expand("%:p")<CR>
 
 " Disable ex mode
 nnoremap Q :

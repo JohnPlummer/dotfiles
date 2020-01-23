@@ -31,6 +31,14 @@ set cursorline
 " Wordwrap
 set wrap linebreak nolist
 
+" Make splits easier
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+set splitbelow
+set splitright
+
 " Spelling
 nnoremap <silent> <leader>s :set spell! spelllang=en_gb<CR>
 set spellfile=$HOME/Dropbox/Config/vim/spell/en.utf-8.add

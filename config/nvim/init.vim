@@ -93,6 +93,12 @@ set conceallevel=2
 call minpac#add('iamcco/markdown-preview.nvim') " :call mkdp#util#install()
 nmap <leader>p <Plug>MarkdownPreview
 
+" Distraction free writing
+call minpac#add('junegunn/goyo.vim')
+call minpac#add('junegunn/limelight.vim')
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 " ALE for linting
 call minpac#add('dense-analysis/ale')
 let g:ale_sign_column_always = 1

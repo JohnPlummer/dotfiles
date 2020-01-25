@@ -28,3 +28,6 @@ tscommand*.txt
 
 # npm things
 npm-debug.log
+
+# ctags file
+tags

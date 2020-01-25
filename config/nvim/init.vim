@@ -64,6 +64,12 @@ let g:NERDSpaceDelims = 1 " Add space after delimiter
 let g:NERDDefaultAlign = 'left' " Left align delimiters
 let g:NERDCommentEmptyLines = 1 " Also comment empty lines
 
+" Colours
+call minpac#add('morhetz/gruvbox')
+let g:gruvbox_italic=1
+set termguicolors
+colorscheme gruvbox
+
 " FZF
 call minpac#add('junegunn/fzf.vim')
 set rtp+=/usr/local/opt/fzf

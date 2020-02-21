@@ -62,7 +62,6 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('preservim/nerdcommenter')
 let g:NERDSpaceDelims = 1 " Add space after delimiter
 let g:NERDDefaultAlign = 'left' " Left align delimiters
-let g:NERDCommentEmptyLines = 1 " Also comment empty lines
 
 " Colours
 call minpac#add('morhetz/gruvbox')

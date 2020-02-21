@@ -120,11 +120,13 @@ let g:ale_linters = {
 \  'markdown': ['prettier'],
 \ 'javascript': ['eslint'],
 \ 'go': ['golint', 'gofmt'],
+\ 'ruby': ['rubocop'],
 \}
 let g:ale_fixers = {
 \   'markdown': ['prettier'],
 \   'javascript': ['prettier'],
 \   'go': ['gofmt'],
+\   'ruby': ['rubocop'],
 \}
 
 " Mappings in the style of unimpaired-next

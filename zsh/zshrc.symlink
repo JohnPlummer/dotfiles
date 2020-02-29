@@ -88,6 +88,10 @@ zstyle ':completion:*' insert-tab pending
 # default to file completion
 zstyle ':completion:*' completer _expand _complete _files _correct _approximate
 
+# Search forward in the history for a line beginning with the current line up to the cursor
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+
 # source all .zsh files inside of the zsh/ directory
 source "$DOTFILES/zsh/utils.zsh"
 source "$DOTFILES/zsh/prompt.zsh"

@@ -6,6 +6,9 @@ filetype plugin indent on
 noremap! jk <Esc>
 vnoremap jk <Esc>
 
+" Make Y yank till end of line
+nnoremap Y y$
+
 " change the mapleader from \ to ,
 let mapleader=","
 

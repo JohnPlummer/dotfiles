@@ -72,6 +72,10 @@ let g:gruvbox_italic=1
 set termguicolors
 colorscheme gruvbox
 
+" Documentation (requires dash.app)
+call minpac#add('rizzatti/dash.vim')
+nmap <leader>d <Plug>DashSearch
+
 " Grepping
 call minpac#add('mhinz/vim-grepper')
 let g:grepper = {}

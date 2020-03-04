@@ -6,6 +6,9 @@ filetype plugin indent on
 noremap! jk <Esc>
 vnoremap jk <Esc>
 
+" turn off search highlights
+nnoremap <Esc><Esc> :silent! noh<cr>
+
 " Make Y yank till end of line
 nnoremap Y y$
 

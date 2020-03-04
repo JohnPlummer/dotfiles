@@ -1,6 +1,20 @@
 export DOTFILES=$HOME/.dotfiles
 export CACHEDIR="$HOME/.local/share"
 
+# Neovim folders
+export VIMCONFIG=$HOME/.config/nvim
+export VIMDATA=$HOME/.local/share/nvim
+
+export ZSH=$DOTFILES/zsh
+
+# define the code directory
+if [[ -d $HOME/Dropbox/code ]]; then
+    export CODE_DIR=$HOME/Dropbox/code
+fi
+
+# display how long all tasks over 10 seconds take
+export REPORTTIME=10
+
 [[ -d "$CACHEDIR" ]] || mkdir -p "$CAHCEDIR"
 
 fpath=(
@@ -11,5 +25,33 @@ fpath=(
 
 typeset -aU path
 
+# Use Neovim as "preferred editor"
+export VISUAL='nvim'
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
+
+# add color to man pages
+export MANROFFOPT='-c'
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
+export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
+export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
+export LESS_TERMCAP_mr=$(tput rev)
+export LESS_TERMCAP_mh=$(tput dim)
+
+if [[ -d $ZSH/functions ]]; then
+    for func in $ZSH/functions/*(:t); autoload -U $func
+fi
+
+# may need to install the resources with
+# `tic resources/xterm-256color-italic.terminfo`
+# `tic resources/tmux-256color-italic.terminfo`
+if [ -z "$TMUX" ]; then
+    export TERM=xterm-256color-italic
+else
+    export TERM=tmux-256color-italic
+fi
+

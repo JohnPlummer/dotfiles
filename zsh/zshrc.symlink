@@ -1,44 +1,9 @@
-export ZSH=$DOTFILES/zsh
-
-if [[ -d $DOTFILES/zsh/functions ]]; then
-    for func in $DOTFILES/zsh/functions/*(:t); autoload -U $func
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # macOS `ls`
+    colorflag="-G"
 fi
-
-########################################################
-# Configuration
-########################################################
-
-# COLOR_BLACK="\e[0;30m"
-# COLOR_BLUE="\e[0;34m"
-# COLOR_GREEN="\e[0;32m"
-# COLOR_CYAN="\e[0;36m"
-# COLOR_PINK="\e[0;35m"
-# COLOR_RED="\e[0;31m"
-# COLOR_PURPLE="\e[0;35m"
-# COLOR_BROWN="\e[0;33m"
-# COLOR_LIGHTGRAY="\e[0;37m"
-# COLOR_DARKGRAY="\e[1;30m"
-# COLOR_LIGHTBLUE="\e[1;34m"
-# COLOR_LIGHTGREEN="\e[1;32m"
-# COLOR_LIGHTCYAN="\e[1;36m"
-# COLOR_LIGHTRED="\e[1;31m"
-# COLOR_LIGHTPURPLE="\e[1;35m"
-# COLOR_YELLOW="\e[1;33m"
-# COLOR_WHITE="\e[1;37m"
-# COLOR_NONE="\e[0m"
-
-# may need to install the resources with
-# `tic resources/xterm-256color-italic.terminfo`
-# `tic resources/tmux-256color-italic.terminfo`
-if [ -z "$TMUX" ]; then
-    export TERM=xterm-256color-italic
-else
-    export TERM=tmux-256color-italic
-fi
-
-# Neovim folders
-export VIMCONFIG=$HOME/.config/nvim
-export VIMDATA=$HOME/.local/share/nvim
 
 # initialize autocomplete
 autoload -U compinit add-zsh-hook
@@ -49,14 +14,6 @@ prepend_path $DOTFILES/bin
 prepend_path $HOME/Dropbox/bin
 prepend_path $HOME/bin
 
-# define the code directory
-# This is where my code exists and where I want the `c` autocomplete to work from exclusively
-if [[ -d $HOME/Dropbox/code ]]; then
-    export CODE_DIR=$HOME/Dropbox/code
-fi
-
-# display how long all tasks over 10 seconds take
-export REPORTTIME=10
 
 setopt NO_BG_NICE
 setopt NO_HUP
@@ -95,6 +52,7 @@ bindkey '\e[B' history-beginning-search-forward
 # source all .zsh files inside of the zsh/ directory
 source "$DOTFILES/zsh/utils.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
+source "$DOTFILES/zsh/aliases.zsh"
 
 
 ########################################################
@@ -116,35 +74,13 @@ zfetch $ZPLUGDIR chriskempson/base16-shell
 # Setup
 ########################################################
 
-if [[ -a $HOME/.localrc ]]; then
-    source $HOME/.localrc
-fi
-
 # add a config file for ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
-
-
-# alias git to hub
-if type hub > /dev/null 2>&1; then
-    eval "$(hub alias -s)"
-fi
 
 # move to next word with ctrl-F
 bindkey -M viins "^F" vi-forward-word
 # Move to end of line with ctrl-E
 bindkey -M viins "^E" vi-add-eol
-
-# add color to man pages
-export MANROFFOPT='-c'
-export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
-export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
-export LESS_TERMCAP_me=$(tput sgr0)
-export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
-export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
-export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
-export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
-export LESS_TERMCAP_mr=$(tput rev)
-export LESS_TERMCAP_mh=$(tput dim)
 
 # z
 if hash brew 2>/dev/null; then
@@ -170,92 +106,13 @@ export GOPATH=$HOME/golib
 prepend_path $GOPATH/bin
 export GOPATH=$GOPATH:$CODE_DIR/home/go:$CODE_DIR/deliveroo/go
 
-########################################################
-# Aliases
-########################################################
-
-# reload zsh config
-alias reload!='RELOAD=1 source $HOME/.zshrc'
-
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-    colorflag="--color"
-else # macOS `ls`
-    colorflag="-G"
-fi
-
-# Use Neovim as "preferred editor"
-export VISUAL=nvim
-# Use Neovim instead of Vim or Vi
-alias vim="nvim"
-alias vi="nvim"
-
-# Filesystem aliases
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-alias cdh='cd $CODE_DIR/home'
-alias cdgh='cd $CODE_DIR/home/go/src/github.com/johnplummer'
-
-alias l="ls -lah ${colorflag}"
-alias la="ls -AF ${colorflag}"
-alias ll="ls -lFh ${colorflag}"
-alias lld="ls -l | grep ^d"
-alias rmf="rm -rf"
-
-# Helpers
-alias grep='grep --color=auto'
-alias df='df -h' # disk free, in Gigabytes, not bytes
-alias du='du -h -c' # calculate disk usage for a folder
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-# remove broken symlinks
-alias clsym="find -L . -name . -o -type d -prune -o -type l -exec rm {} +"
-
-# git aliases
-alias gs='git s'
-alias glog="git l"
-alias gho="git open"
-alias grbom="git fetch && git rebase origin/master"
-
-# tmux aliases
-alias ta='tmux attach'
-alias tls='tmux ls'
-alias tat='tmux attach -t'
-alias tns='tmux new-session -s'
-
-# config aliases
-alias zshconfig="vim $HOME/.zshrc"
-alias gitconfig="vim $HOME/.gitconfig"
-alias vimconfig="vim $HOME/.vimrc"
-alias rubocopconfig="vim $HOME/.rubocop.yml"
-
-# work aliases
-alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'
-alias cdw='cd $CODE_DIR/deliveroo'
-alias shs-production="ssh ecs@hopper-production self-help-service web hopper-runner bundle exec rails c"
-alias shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner bundle exec rails c"
-alias ssh-shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner sh"
-alias ssh-atlas-staging="ssh ecs@hopper-staging logistics-dashboard web hopper-runner sh"
-alias ssh-ow-staging="ssh ecs@hopper-staging orderweb web hopper-runner sh"
-alias os-staging="ssh ecs@hopper-staging order-status web hopper-runner bundle exec rails c"
-alias os-production="ssh ecs@hopper-production order-status web hopper-runner bundle exec rails c"
-alias cca-staging="ssh ecs@hopper-staging contact-center-api web hopper-runner bundle exec rails c"
-alias ssh-cca-staging="ssh ecs@hopper-staging contact-center-api web hopper-runner sh"
-alias ssh-cca-production="ssh ecs@hopper-production contact-center-api web hopper-runner sh"
-
-# work projects (used in Alfred workflow `it ...`)
-alias shs='cd $CODE_DIR/deliveroo/self-help-service'
-alias contact='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo/contact-context'
-
 # Staging reset script
 export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc
 
 source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # source .localrc for stuff that should not be commited (this should be last)
-source $HOME/.localrc
+if [[ -a $HOME/.localrc ]]; then
+    source $HOME/.localrc
+fi
 

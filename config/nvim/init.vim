@@ -23,7 +23,7 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Current path to clipboard
-nnoremap <silent> <leader>cp :let @+=expand("%:p")<CR>
+nnoremap <silent> <leader>cp :let @+=expand("%")<CR>
 
 " Disable ex mode
 nnoremap Q :

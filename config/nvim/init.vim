@@ -64,6 +64,9 @@ call minpac#add('tpope/vim-vinegar')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-fugitive')
 
+" Github
+call minpac#add('ruanyl/vim-gh-line')
+
 " NerdCommenter
 call minpac#add('preservim/nerdcommenter')
 let g:NERDSpaceDelims = 1 " Add space after delimiter

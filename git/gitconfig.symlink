@@ -55,6 +55,10 @@
     pa = push --all
     pt = push --tags
     b = branch
+    ho = open
+
+    rbom = "git fetch && git rebase origin/master"
+    push-and-stage = "git push && stage"
     
     # open in github
     open = !sh -c "ls > /dev/null;open `git remote -v | grep fetch | awk '{print $2}' | sed 's|git@|http://|' | sed 's|com:|com/|' | head -n1`"

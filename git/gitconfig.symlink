@@ -57,7 +57,7 @@
     b = branch
     ho = open
 
-    rbom = "git fetch && git rebase origin/master"
+    rbom = "!git fetch && git rebase origin/master"
     push-and-stage = "git push && stage"
     
     # open in github

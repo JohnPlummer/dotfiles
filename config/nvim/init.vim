@@ -6,8 +6,15 @@ filetype plugin indent on
 noremap! jk <Esc>
 vnoremap jk <Esc>
 
-" turn off search highlights
-nnoremap <Esc><Esc> :silent! noh<cr>
+" Toggle hlsearch with <leader>hs
+nmap <leader>hs :set hlsearch! hlsearch?<CR>
+
+"This allows for change paste motion cp{motion}
+nmap <silent> cp :set opfunc=ChangePaste<CR>g@
+function! ChangePaste(type, ...)
+    silent exe "normal! `[v`]\"_c"
+    silent exe "normal! p"
+endfunction
 
 " Make Y yank till end of line
 nnoremap Y y$
@@ -66,6 +73,7 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-vinegar')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-unimpaired')
 
 " Github
 call minpac#add('ruanyl/vim-gh-line')

@@ -54,6 +54,8 @@ alias tber='RAILS_ENV=test bundle exec rake'
 alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'
 alias cdw='cd $CODE_DIR/deliveroo'
 alias shs-production="ssh ecs@hopper-production self-help-service web hopper-runner bundle exec rails c"
+alias orderweb-production="ssh ecs@hopper-production orderweb web hopper-runner --allow-service-overrides bundle exec rails c"
+alias orderweb-staging="ssh ecs@hopper-staging orderweb web hopper-runner --allow-service-overrides bundle exec rails c"
 alias shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner bundle exec rails c"
 alias ssh-shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner sh"
 alias ssh-atlas-staging="ssh ecs@hopper-staging logistics-dashboard web hopper-runner sh"

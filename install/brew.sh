@@ -10,6 +10,7 @@ echo "=============================="
 
 formulas=(
     broot
+    ctags
     fzf
     git
     golang

@@ -110,7 +110,7 @@ call minpac#add('junegunn/fzf.vim')
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-b> :Buffers<CR>
-nnoremap <C-t> :Tags<CR>
+nnoremap <C-t>t :Tags<CR>
 nnoremap <C-f> :Rg<CR>
 " [Tags] Command to generate tags file
 let g:fzf_tags_command = 'ctags -R .'

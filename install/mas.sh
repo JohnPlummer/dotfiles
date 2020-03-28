@@ -8,6 +8,7 @@ read -r -t 60 -p "What is yout Apple ID?: " appleid
 mas signin --dialog "$appleid"
 
 # Mac App Store apps to install
+# Get id from sharing link
 apps=(
     "drafts:1435957248"
     "keynote:409183694"
@@ -26,6 +27,7 @@ apps=(
     "pixelmator:407963104"
     "kindle:405399194"
     "evernote:406056744"
+    "webcam-settings:533696630"
 )
 
 for app in "${apps[@]}"; do

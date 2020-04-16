@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+# This script resets your _local_ staging branch to be the master branch plus any
+# PRs currently tagged as 'staged'. IT IS DESTRUCTIVE.
+require 'octokit'
+
+repo_name = `basename -s .git $(git config --get remote.origin.url)`.strip()
+puts "🔎  Detecting repo name: #{repo_name}"
+
+env_var = 'STAGING_RESET_GITHUB_TOKEN'
+access_token = ENV[env_var]
+
+if access_token.nil?
+  abort <<-ECHO
+🔐  Oh noes!
+Please create a Github access token and put it in the #{env_var} env var.
+You'll need all the 'repo' scopes so we can access the private `#{repo_name}` repo.
+More info: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+ECHO
+end
+
+github = Octokit::Client.new(access_token: access_token)
+
+begin
+  github.repo("deliveroo/#{repo_name}")
+rescue Octokit::Forbidden
+  abort <<-ECHO
+🔐  Oh noes!
+The Github access token needs to be granted SSO access for the Deliveroo org
+More info: https://help.github.com/articles/authenticating-to-a-github-organization-with-saml-single-sign-on/
+ECHO
+end
+
+def cmd(cmd, reason, emoji = '✅')
+  STDOUT.write "⏱  #{reason}"
+  success = system("#{cmd} > /dev/null 2> /dev/null")
+  abort "\r🛑\n⚠️  Could not execute: #{cmd}" unless success
+  puts "\r#{emoji}"
+end
+
+cmd 'git fetch origin master', 'Updating your local copy of master'
+cmd 'git checkout staging', 'Swapping to your staging branch'
+cmd 'git reset origin/master --hard', 'Reseting your local staging to origin/master'
+
+issues = github.search_issues("repo:deliveroo/#{repo_name} is:pr is:open label:staged -label:\"do not merge\" sort:created-asc'")
+
+puts "\n🔢  #{issues[:items].size} PRs tagged as 'staged'"
+
+status = {}
+
+issues[:items].each do |issue|
+  pr = github.get(issue[:pull_request][:url])
+  branch = pr[:head][:ref]
+
+  icon = %w{🙈 🙊 🙉}.sample
+  puts "#{icon}  Merging: #{pr[:title]}…"
+
+  begin
+    cmd "git fetch origin #{branch}", 'Retrieving code from github'
+    cmd "git merge --no-edit origin/#{branch}", 'Merging with local staging'
+    status[pr[:title]] = true
+  rescue SystemExit
+    status[pr[:title]] = false
+    cmd 'git reset HEAD --hard', 'Rewinding to before problematic branch', '⏮'
+  end
+  puts "\n"
+end
+
+puts <<-ECHO
+🎉 All branches have been merged! You can merge at will with:
+   git push origin staging --force
+
+🙇  Consider posting this in #staging-status on slack to let everyone know:
+
+I've just reset `#{repo_name}`'s staging branch to master, adding as many of the PRs tagged `staged` as possible. I tried the following PRs:
+
+ECHO
+
+status.sort.each do |title, status|
+  puts "#{status ? '✅' : '❌'}  #{title}"
+end
+puts "\n"
+
+puts <<-ECHO
+As usual, you will need to reset your local staging branch with
+`git fetch && git checkout staging && git reset origin/staging --hard` the next time you work on it
+
+ECHO
+

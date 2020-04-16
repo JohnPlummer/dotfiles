@@ -39,7 +39,7 @@ nnoremap <silent> <leader>cp :let @+=expand("%")<CR>
 nnoremap Q :
 
 " Line numbers
-set number relativenumber
+set number 
 
 " Make the cursor actually visible
 set cursorline

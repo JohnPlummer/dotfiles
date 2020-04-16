@@ -14,7 +14,6 @@ prepend_path $DOTFILES/bin
 prepend_path $HOME/Dropbox/bin
 prepend_path $HOME/bin
 
-
 setopt NO_BG_NICE
 setopt NO_HUP
 setopt NO_LIST_BEEP
@@ -82,10 +81,8 @@ bindkey -M viins "^F" vi-forward-word
 # Move to end of line with ctrl-E
 bindkey -M viins "^E" vi-add-eol
 
-# z
-if hash brew 2>/dev/null; then
-    source `brew --prefix`/etc/profile.d/z.sh
-fi
+#z.lua
+eval "$(lua $DOTFILES/bin/z.lua --init zsh)"
 
 # broot
 source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br

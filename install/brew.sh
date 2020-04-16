@@ -27,7 +27,6 @@ formulas=(
     wget
     vim
     yarn
-    z
     zsh
 )
 

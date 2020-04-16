@@ -52,7 +52,7 @@ bindkey '\e[B' history-beginning-search-forward
 source "$DOTFILES/zsh/utils.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
 source "$DOTFILES/zsh/aliases.zsh"
-
+source "$DOTFILES/zsh/fzf.zsh"
 
 ########################################################
 # Plugin setup
@@ -112,4 +112,5 @@ source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
 if [[ -a $HOME/.localrc ]]; then
     source $HOME/.localrc
 fi
+
 

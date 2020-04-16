@@ -49,6 +49,10 @@ alias rubocopconfig="vim $HOME/.rubocop.yml"
 alias be='bundle exec'
 alias ber='bundle exec rake'
 alias tber='RAILS_ENV=test bundle exec rake'
+alias test='bundle exec rspec'
+alias testf='bundle exec rspec --only-failures'
+alias testff='bundle exec rspec --next-failure'
+
 
 # work aliases
 alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'

@@ -29,6 +29,9 @@ set clipboard+=unnamedplus
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Close all buffers but this one
+noremap <silent> <leader>bd :w <bar> %bd <bar> e# <CR>
+
 " Open journal file
 nnoremap <Leader>gt :e ~/Dropbox/markdown/<C-r>=strftime("%Y-%m-%d") . '.md'<cr><cr>G
 

@@ -1,5 +1,5 @@
 # reload zsh config
-alias reload!='RELOAD=1 source $HOME/.zshrc'
+alias reload='RELOAD=1 source $HOME/.zshrc'
 
 # Use Neovim instead of Vim or Vi
 alias vim="nvim"

@@ -10,3 +10,4 @@ config/nvim/pack/minpac
 config/nvim/autoload/plug.vim
 vim/vim.symlink/spell/
 vim/vim.symlink/plugged/
+node_modules

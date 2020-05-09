@@ -75,9 +75,6 @@ zfetch $ZPLUGDIR chriskempson/base16-shell
 # Setup
 ########################################################
 
-# add a config file for ripgrep
-export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
-
 # move to next word with ctrl-F
 bindkey -M viins "^F" vi-forward-word
 # Move to end of line with ctrl-E
@@ -85,9 +82,6 @@ bindkey -M viins "^E" vi-add-eol
 
 #z.lua
 eval "$(lua $DOTFILES/bin/z.lua --init zsh)"
-
-# broot
-source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 ########################################################
 # Ruby
@@ -107,8 +101,6 @@ export GOPATH=$GOPATH:$CODE_DIR/home/go:$CODE_DIR/deliveroo/go
 
 # Staging reset script
 export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc
-
-source $HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # source .localrc for stuff that should not be commited (this should be last)
 if [[ -a $HOME/.localrc ]]; then

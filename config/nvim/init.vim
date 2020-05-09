@@ -2,6 +2,7 @@
 set nocompatible
 filetype plugin indent on
 
+source $HOME/.config/nvim/general/functions.vim
 source $HOME/.config/nvim/general/mappings.vim
 source $HOME/.config/nvim/general/settings.vim
 

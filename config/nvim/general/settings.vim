@@ -17,3 +17,14 @@ set splitright
 " Spelling
 set spellfile=$HOME/Dropbox/Config/vim/spell/en.utf-8.add
 
+hi Comment cterm=italic
+syntax on
+
+
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
+
+colorscheme gruvbox

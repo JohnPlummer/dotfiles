@@ -7,6 +7,9 @@ set number
 " Make the cursor actually visible
 set cursorline
 
+" Indicate 80 columns
+set colorcolumn=80
+
 " Wordwrap
 set wrap linebreak nolist
 

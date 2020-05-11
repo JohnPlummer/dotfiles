@@ -29,6 +29,10 @@ function! ChangePaste(type, ...)
     silent exe "normal! p"
 endfunction
 
+" Tab between buffers
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+
 " Close all buffers but this one
 noremap <silent> <leader>bd :w <bar> %bd <bar> e# <CR>
 

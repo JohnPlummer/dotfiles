@@ -34,7 +34,7 @@ endfunction
 :nnoremap <S-Tab> :bprevious<CR>
 
 " Close all buffers but this one
-noremap <silent> <leader>bd :w <bar> %bd <bar> e# <CR>
+noremap <silent> <leader>bo :w <bar> %bd <bar> e# <CR>
 
 " Current path to clipboard
 nnoremap <silent> <leader>cp :let @+=expand("%")<CR>

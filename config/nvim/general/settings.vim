@@ -4,6 +4,10 @@ set clipboard+=unnamedplus
 " Line numbers
 set number 
 
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
 " Make the cursor actually visible
 set cursorline
 

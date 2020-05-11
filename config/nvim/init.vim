@@ -17,6 +17,7 @@ source $HOME/.config/nvim/plug-config/grepper.vim
 source $HOME/.config/nvim/plug-config/markdown.vim
 source $HOME/.config/nvim/plug-config/nerdcommenter.vim
 source $HOME/.config/nvim/plug-config/tim-pope.vim
+source $HOME/.config/nvim/plug-config/quickscope.vim
 
 " Themes
 source $HOME/.config/nvim/themes/gruvbox.vim

@@ -48,6 +48,13 @@ nnoremap <C-h> <C-w><C-h>
 " Spelling
 nnoremap <silent> <leader>s :set spell! spelllang=en_gb<CR>
 
+" Navigate pop up menu with arrow keys
+inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
+inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
+inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
+inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
+inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
+
 " ##################### More specific mappings #################################
 
 " Open journal file

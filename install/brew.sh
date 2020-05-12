@@ -18,7 +18,6 @@ formulas=(
     neovim
     prettier
     python
-    ranger
     rbenv
     ripgrep
     ruby-build

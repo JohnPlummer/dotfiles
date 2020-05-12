@@ -1,9 +1,16 @@
-call minpac#add('francoiscabrol/ranger.vim')
-call minpac#add('rbgrouleff/bclose.vim')
+call minpac#add('kevinhwang91/rnvimr', {'do': 'make sync'})
 
-" don't use <leader>f
-let g:ranger_map_keys = 0
+" Need to install ranger with
+" `pip3 install ranger-fm`
+" as brew install installs the python 2 version
 
-" open ranger when vim open a directory
-let g:ranger_replace_netrw = 1 
-nnoremap - :Ranger<CR>
+" Make Ranger replace Netrw and be the file explorer
+let g:rnvimr_ex_enable = 1
+
+" Hide Ranger after picking a file
+let g:rnvimr_pick_enable = 1
+
+" Make Neovim wipe the buffers corresponding to the files deleted by Ranger
+let g:rnvimr_bw_enable = 1
+
+nnoremap <silent> - :RnvimrToggle<CR>

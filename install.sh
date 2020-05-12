@@ -22,6 +22,10 @@ fi
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
 
+# Can't use `brew install ranger` because we want the pythen3 verion
+echo "installing ranger"
+pip3 install ranger-fm pynvim
+
 echo "installing minpac"
 mkdir -p ~/.config/nvim/pack/minpac/opt
 git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac

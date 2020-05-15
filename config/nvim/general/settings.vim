@@ -34,4 +34,4 @@ if (has("termguicolors"))
     hi LineNr ctermbg=NONE guibg=NONE
 endif
 
-colorscheme gruvbox
+colorscheme nord

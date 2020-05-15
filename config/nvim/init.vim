@@ -23,4 +23,5 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 
 " Themes
 source $HOME/.config/nvim/themes/gruvbox.vim
+source $HOME/.config/nvim/themes/nord.vim
 " source $HOME/.config/nvim/themes/onedark.vim

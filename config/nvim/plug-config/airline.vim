@@ -12,7 +12,7 @@ let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline_powerline_fonts = 1
 
 " Switch to your current theme
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'nord'
 
 " Always show tabs 
 set showtabline=2

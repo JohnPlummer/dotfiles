@@ -13,7 +13,7 @@ let g:fzf_tags_command = 'ctags -R .'
 let g:fzf_buffers_jump = 1
 
 " Like the default command but include hidden
-command! -bang -nargs=* FZFH call fzf#run(fzf#wrap({'source': 'rg --hidden --no-ignore -l ""'}))
+command! -bang -nargs=* FZFH call fzf#run(fzf#wrap({'source': 'rg --hidden -l ""'}))
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 

@@ -2,7 +2,7 @@
 call minpac#add('junegunn/fzf.vim')
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
-nnoremap <C-h> :FZFH<CR>
+nnoremap <leader>ph :FZFH<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-t> :Tags<CR>
 nnoremap <C-f> :Rg<CR>

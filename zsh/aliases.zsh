@@ -20,6 +20,12 @@ alias ll="ls -lFh ${colorflag}"
 alias lld="ls -l | grep ^d"
 alias rmf="rm -rf"
 
+# Ranger
+alias r='ranger'
+
+# LazyDocker
+alias ld='lazydocker'
+
 # Helpers
 alias grep='grep --color=auto'
 alias df='df -h' # disk free, in Gigabytes, not bytes

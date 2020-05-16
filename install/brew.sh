@@ -15,6 +15,7 @@ formulas=(
     git
     golang
     grep
+    lazydocker
     neovim
     prettier
     python

@@ -27,6 +27,8 @@ set spellfile=$HOME/Dropbox/Config/vim/spell/en.utf-8.add
 hi Comment cterm=italic
 syntax on
 
+" Open folds for git buffers
+autocmd! FileType git setlocal foldlevel=1
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

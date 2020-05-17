@@ -1,7 +1,7 @@
 call minpac#add('kevinhwang91/rnvimr', {'do': 'make sync'})
 
 " Need to install ranger with
-" `pip3 install ranger-fm`
+" `pip3 install ranger-fm pynvim`
 " as brew install installs the python 2 version
 
 " Make Ranger replace Netrw and be the file explorer

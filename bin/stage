@@ -6,13 +6,13 @@ rails = system("grep 'rails' 'Gemfile' > /dev/null 2> /dev/null")
 puts "In a Rails project" if rails
 
 repo_name = `basename -s .git $(git config --get remote.origin.url)`.strip()
-puts "🔎  Detecting repo name: #{repo_name}"
+puts "🔎 Detecting repo name: #{repo_name}"
 branch_name = `git rev-parse --abbrev-ref HEAD`
 branch_name.strip!
-puts "🔎  Detecting branch name: #{branch_name}"
+puts "🔎 Detecting branch name: #{branch_name}"
 if %w(staging master).include? branch_name
   abort <<-ECHO
-🛑  Oh noes!
+🛑 Oh noes!
 You probably don't want to use this script from `#{branch_name}`...
 ECHO
 end
@@ -22,7 +22,7 @@ access_token = ENV[env_var]
 
 if access_token.nil?
   abort <<-ECHO
-🔐  Oh noes!
+🔐 Oh noes!
 Please create a Github access token and put it in the #{env_var} env var.
 You'll need all the 'repo' scopes so we can access the private `#{repo_name}` repo.
 More info: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
@@ -35,7 +35,7 @@ begin
   github.repo("deliveroo/#{repo_name}")
 rescue Octokit::Forbidden
   abort <<-ECHO
-🔐  Oh noes!
+🔐 Oh noes!
 The Github access token needs to be granted SSO access for the Deliveroo org
 More info: https://help.github.com/articles/authenticating-to-a-github-organization-with-saml-single-sign-on/
 ECHO
@@ -59,11 +59,11 @@ cmd "git merge #{branch_name} -q -m '#{message}'", message
 
 
 puts <<-ECHO
-🎉  `#{branch_name}` successfully merged into latest staging and test database reset
+🎉 `#{branch_name}` successfully merged into latest staging and test database reset
 
 Next steps:
-🙇  bundle exec rspec
-🙇  git push
+🙇 bundle exec rspec
+🙇 git push
 
 ECHO
 

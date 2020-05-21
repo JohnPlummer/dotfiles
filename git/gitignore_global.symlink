@@ -31,3 +31,6 @@ npm-debug.log
 
 # ctags file
 tags
+
+# Byte-compiled python
+__pycache__/

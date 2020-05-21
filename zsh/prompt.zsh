@@ -1,46 +1,46 @@
-autoload -Uz vcs_info
-autoload -Uz add-zsh-hook
-setopt prompt_subst
+# npm install -g spaceship-prompt
 
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats ' %b'
+autoload -U promptinit; promptinit
+prompt spaceship
 
-add-zsh-hook precmd vcs_info
-add-zsh-hook precmd async_trigger
+SPACESHIP_BATTERY_THRESHOLD=100
+# SPACESHIP_BATTERY_SHOW=always
 
-source "$DOTFILES/zsh/git_prompt.zsh"
-source "$DOTFILES/zsh/jobs_prompt.zsh"
-source "$DOTFILES/zsh/node_prompt.zsh"
+SPACESHIP_PROMPT_ORDER=(
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  package       # Package version
+  exec_time     # Execution time
+  line_sep      # Line break
+  battery       # Battery level and status
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+SPACESHIP_RPROMPT_ORDER=(
+  node          # Node.js section
+  ruby          # Ruby section
+  golang        # Go section
+  docker        # Docker section
+)
 
-PROMPT_SYMBOL='❯'
-
-ASYNC_PROC=0
-function async() {
-    printf "%s" "$(git_status) $(suspended_jobs)" > "/tmp/zsh_prompt_$$"
-
-    kill -s USR1 $$
-
-    if [[ "${ASYNC_PROC}" != 0 ]]; then
-        kill -s HUP $ASYNC_PROC >/dev/null 2>&1 || :
-    fi
-}
-
-function async_trigger() {
-    ASYNC_PROC=$!
-    async &!
-}
-
-function TRAPUSR1() {
-    vcs_info
-    RPROMPT='$(cat /tmp/zsh_prompt_$$)'
-    ASYNC_PROC=0
-
-    zle && zle reset-prompt
-}
-
-precmd() {
-    print -P "\n%F{005}%~ $(node_prompt)"
-}
-
-export PROMPT='%(?.%F{006}.%F{009})$PROMPT_SYMBOL%f '
-export RPROMPT=''
+SPACESHIP_UNUSED=(
+  time          # Time stamps section
+  user          # Username section
+  host          # Hostname section
+  vi_mode       # Vi-mode indicator
+  elixir        # Elixir section
+  xcode         # Xcode section
+  swift         # Swift section
+  php           # PHP section
+  rust          # Rust section
+  haskell       # Haskell Stack section
+  julia         # Julia section
+  aws           # Amazon Web Services section
+  venv          # virtualenv section
+  conda         # conda virtualenv section
+  pyenv         # Pyenv section
+  dotnet        # .NET section
+  ember         # Ember.js section
+  terraform     # Terraform workspace section
+)

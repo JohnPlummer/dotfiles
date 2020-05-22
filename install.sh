@@ -19,6 +19,8 @@ if [ "$(uname)" == "Darwin" ]; then
     source install/osx.sh
 fi
 
+source install/packages.sh
+
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
 

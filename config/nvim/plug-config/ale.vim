@@ -2,7 +2,7 @@
 call minpac#add('dense-analysis/ale')
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
-\  'markdown': ['prettier'],
+\  'markdown': ['mdl', 'writegood'],
 \ 'javascript': ['eslint'],
 \ 'go': ['golint', 'gofmt'],
 \ 'ruby': ['rubocop'],

@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@msgpack/msgpack/-/msgpack-1.12.1.tgz#aab1084bc33c955501bc0f202099e38304143e0b"
   integrity sha512-nGwwmkdm3tuLdEkWMIwLBgFBfMFILILxcZIQY0dfqsdboN2iZdKfOYKUOKoa0wXw1FL1PL3yEYGPCXhwodQDTA==
 
+adverb-where@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/adverb-where/-/adverb-where-0.2.1.tgz#5c639ed02d06c4c61d64296cf72f6ea39e682a49"
+  integrity sha512-IAveFBziMRMNPKFdWRcdIKaJvJG1cAfU9/tf9MzqQ84Dh4QjD9eqwnt4hNSt9cbrcEJD74BMIOaRVgVDEU7MwQ==
+
 async@^2.6.1:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
@@ -65,6 +70,11 @@ colorspace@1.1.x:
     color "3.0.x"
     text-hex "1.0.x"
 
+commander@^2.19.0:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
+
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -83,6 +93,11 @@ dom-walk@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
   integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+
+e-prime@^0.10.2:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/e-prime/-/e-prime-0.10.4.tgz#562f56a50f0def8a6c7a73069fff42b035e569d7"
+  integrity sha512-tzBmM2mFSnAq5BuxPSyin6qXb3yMe1wufJN7L7ZPcEWS5S+jI2dhKQEoqHVEcSMMXo/j5lcWpX5jzA6wLSmX6w==
 
 enabled@1.0.x:
   version "1.0.2"
@@ -190,10 +205,20 @@ neovim@^4.8.0:
     semver "^7.1.1"
     winston "3.2.1"
 
+no-cliches@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/no-cliches/-/no-cliches-0.2.2.tgz#8dca569aa9eb28a8c3f431804a5aadd524607f0a"
+  integrity sha512-iEOqDAOFl6uN5jZGRj39Jdo8qALzf2HPXtpFso8+BMaDylDrUMYMwhFbfYGgxdnMlsRnxYTwv68kaXEpsHIapg==
+
 one-time@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/one-time/-/one-time-0.0.4.tgz#f8cdf77884826fe4dff93e3a9cc37b1e4480742e"
   integrity sha1-+M33eISCb+Tf+T46nMN7HkSAdC4=
+
+passive-voice@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/passive-voice/-/passive-voice-0.1.0.tgz#16ff91ae40ba0e92c43e671763fdc842a70270b1"
+  integrity sha1-Fv+RrkC6DpLEPmcXY/3IQqcCcLE=
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -249,6 +274,11 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
+spaceship-prompt@^3.11.2:
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/spaceship-prompt/-/spaceship-prompt-3.11.2.tgz#8fbe2e00cc5d62c5b8e17fc6b0b2355a3996d13c"
+  integrity sha512-BI1oTiJPFFC03wXzJDa03Y5jnRcrrqAg8utwcRHaopTlgbZral/9nH/NgpYyFiB9AtfCfBYGhcVvVC3kzNoV/Q==
+
 stack-trace@0.0.x:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
@@ -273,6 +303,11 @@ text-hex@1.0.x:
   resolved "https://registry.yarnpkg.com/text-hex/-/text-hex-1.0.0.tgz#69dc9c1b17446ee79a92bf5b884bb4b9127506f5"
   integrity sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==
 
+too-wordy@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/too-wordy/-/too-wordy-0.2.2.tgz#e02b43a9e0817621a71db5d7d1c67634820a23d0"
+  integrity sha512-ePZfjs1ajL4b8jT4MeVId+9Ci5hJCzAtNIEXIHyFYmKmQuX+eHC/RNv6tuLMUhrGrhJ+sYWW/lBF/LKILHGZEA==
+
 triple-beam@^1.2.0, triple-beam@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/triple-beam/-/triple-beam-1.3.0.tgz#a595214c7298db8339eeeee083e4d10bd8cb8dd9"
@@ -282,6 +317,11 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+weasel-words@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/weasel-words/-/weasel-words-0.1.1.tgz#7137946585c73fe44882013853bd000c5d687a4e"
+  integrity sha1-cTeUZYXHP+RIggE4U70ADF1oek4=
 
 winston-transport@^4.3.0:
   version "4.3.0"
@@ -305,3 +345,16 @@ winston@3.2.1:
     stack-trace "0.0.x"
     triple-beam "^1.3.0"
     winston-transport "^4.3.0"
+
+write-good@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/write-good/-/write-good-1.0.2.tgz#0b09ed8082f85ebb2fb325b9c7128295681d5b2d"
+  integrity sha512-1gm9Ouz7mBROF7aC8vvSm/3JtPfTiZ+fegPGCKdxsYhf6VYeStHfVFx2Hnj2kJviHPx5zZkiQ8DytzZMP0Zqwg==
+  dependencies:
+    adverb-where "^0.2.1"
+    commander "^2.19.0"
+    e-prime "^0.10.2"
+    no-cliches "^0.2.2"
+    passive-voice "^0.1.0"
+    too-wordy "^0.2.2"
+    weasel-words "^0.1.1"

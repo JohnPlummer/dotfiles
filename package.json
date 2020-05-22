@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "global": "^4.4.0",
-    "neovim": "^4.8.0"
+    "neovim": "^4.8.0",
+    "spaceship-prompt": "^3.11.2",
+    "write-good": "^1.0.2"
   }
 }

@@ -20,6 +20,7 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/signify.vim
+source $HOME/.config/nvim/plug-config/snippets.vim
 
 " Themes
 source $HOME/.config/nvim/themes/gruvbox.vim

@@ -2,6 +2,8 @@
     "diagnostic.errorSign": "❌",
     "diagnostic.warningSign": "⚠️",
     "diagnostic.infoSign": "ℹ️",
+
+    // markdown
     "markdownlint.config": {
         "default": true,
         "MD009": {
@@ -14,6 +16,8 @@
         },
         "MD026": false
     },
+
+    // ruby
     "solargraph.promptDownload": true,
     "solargraph.diagnostics": true,
     "solargraph.completion": true,
@@ -23,5 +27,8 @@
     "solargraph.definitions": true,
     "solargraph.rename": true,
     "solargraph.references": true,
-    "solargraph.folding": true
+    "solargraph.folding": true,
+
+    // snippets
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
 }

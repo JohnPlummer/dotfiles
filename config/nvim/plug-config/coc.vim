@@ -1,5 +1,20 @@
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 
+let g:coc_global_extensions = [
+      \'coc-marketplace',
+      \'coc-markdownlint',
+      \'coc-json', 
+      \'coc-tag', 
+      \'coc-solargraph', 
+      \'coc-prettier', 
+      \'coc-snippets', 
+      \'coc-eslint', 
+      \'coc-prettier', 
+      \'coc-docker', 
+      \'coc-vimlsp', 
+      \'coc-git'
+      \]
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -26,6 +41,7 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+nmap <silent> <leader>cm :CocList marketplace<CR>
 
 " Mappings in the style of unimpaired-next
 nmap <silent> [f <Plug>(coc-diagnostic-prev)

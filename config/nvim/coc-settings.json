@@ -11,7 +11,8 @@
         "MD024": false,
         "MD025": {
             "front_matter_title": ""
-        }
+        },
+        "MD026": false
     },
     "solargraph.promptDownload": true,
     "solargraph.diagnostics": true,

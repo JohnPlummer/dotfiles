@@ -46,7 +46,7 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
 " Spelling
-nnoremap <silent> <leader>s :set spell! spelllang=en_gb<CR>
+nnoremap <silent> yos :set spell! spelllang=en_gb<CR>
 
 " ##################### More specific mappings #################################
 

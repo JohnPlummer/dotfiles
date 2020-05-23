@@ -40,3 +40,11 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " Formatting buffer
 xmap <leader>F  <Plug>(coc-format)
 nmap <leader>F  <Plug>(coc-format)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>rn <Plug>(coc-rename)
+nmap <silent> <leader>rf <Plug>(coc-refactor)

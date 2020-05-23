@@ -13,7 +13,14 @@
             "front_matter_title": ""
         }
     },
-    "solargraph.formatting": true,
+    "solargraph.promptDownload": true,
+    "solargraph.diagnostics": true,
+    "solargraph.completion": true,
     "solargraph.hover": true,
-    "solargraph.diagnostics": true
+    "solargraph.formatting": true,
+    "solargraph.symbols": true,
+    "solargraph.definitions": true,
+    "solargraph.rename": true,
+    "solargraph.references": true,
+    "solargraph.folding": true
 }

@@ -1,4 +1,4 @@
-" ##################### Make vim sane #########################################
+" ##################### Make vim sane ##########################################
 
 " change the <leader> from \ to <space>
 let mapleader=" "
@@ -51,8 +51,9 @@ nnoremap <silent> yos :set spell! spelllang=en_gb<CR>
 " ##################### More specific mappings #################################
 
 " Open journal file
-nnoremap <Leader>gt :e ~/Dropbox/markdown/<C-r>=strftime("%Y-%m-%d") . '.md'<cr><cr>G
+nnoremap <Leader>gt
+	\ :e ~/Dropbox/markdown/<C-r>=strftime("%Y-%m-%d") . '.md'<cr><cr>G
 
-" ##################### Plugin specific mappings #################################
+" ##################### Plugin specific mappings ###############################
 " in plug-config
 

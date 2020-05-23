@@ -15,10 +15,11 @@ let g:ale_fixers = {
 \}
 
 " Mappings in the style of unimpaired-next
-nmap <silent> [W <Plug>(ale_first)
-nmap <silent> [w <Plug>(ale_previous)
-nmap <silent> ]w <Plug>(ale_next)
-nmap <silent> ]W <Plug>(ale_last)
+nmap <silent> [F <Plug>(ale_first)
+nmap <silent> [f <Plug>(ale_previous)
+nmap <silent> ]f <Plug>(ale_next)
+nmap <silent> ]F <Plug>(ale_last)
+nmap <silent> yof <Plug>(ale_toggle)
 nmap <silent> <leader>f <Plug>(ale_fix)
 
 " Pimp linting symbols

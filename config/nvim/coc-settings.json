@@ -1,0 +1,26 @@
+{
+    "diagnostic.errorSign": "❌",
+    "diagnostic.warningSign": "⚠️",
+    "diagnostic.infoSign": "ℹ️",
+    "markdownlint.config": {
+        "default": true,
+        "MD009": {
+            "br_spaces": 2
+        },
+        "MD013": false,
+        "MD024": false,
+        "MD025": {
+            "front_matter_title": ""
+        }
+    },
+    "solargraph.promptDownload": true,
+    "solargraph.diagnostics": true,
+    "solargraph.completion": true,
+    "solargraph.hover": true,
+    "solargraph.formatting": true,
+    "solargraph.symbols": true,
+    "solargraph.definitions": true,
+    "solargraph.rename": true,
+    "solargraph.references": true,
+    "solargraph.folding": true
+}

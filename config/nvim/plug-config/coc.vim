@@ -1,18 +1,17 @@
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 
 let g:coc_global_extensions = [
-      \'coc-marketplace',
+      \'coc-docker',
+      \'coc-eslint',
+      \'coc-git',
+      \'coc-json',
       \'coc-markdownlint',
-      \'coc-json', 
-      \'coc-tag', 
-      \'coc-solargraph', 
-      \'coc-prettier', 
-      \'coc-snippets', 
-      \'coc-eslint', 
-      \'coc-prettier', 
-      \'coc-docker', 
-      \'coc-vimlsp', 
-      \'coc-git'
+      \'coc-marketplace',
+      \'coc-prettier',
+      \'coc-snippets',
+      \'coc-solargraph',
+      \'coc-tag',
+      \'coc-vimlsp'
       \]
 
 " Use tab for trigger completion with characters ahead and navigate.

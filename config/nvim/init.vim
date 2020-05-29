@@ -25,3 +25,4 @@ source $HOME/.config/nvim/plug-config/snippets.vim
 " Themes
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/themes/nord.vim
+colorscheme nord

@@ -45,13 +45,3 @@ export LESS_TERMCAP_mh=$(tput dim)
 if [[ -d $ZSH/functions ]]; then
     for func in $ZSH/functions/*(:t); autoload -U $func
 fi
-
-# may need to install the resources with
-# `tic resources/xterm-256color-italic.terminfo`
-# `tic resources/tmux-256color-italic.terminfo`
-if [ -z "$TMUX" ]; then
-    export TERM=xterm-256color-italic
-else
-    export TERM=tmux-256color-italic
-fi
-

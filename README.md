@@ -34,6 +34,15 @@ Next, the install script will perform a check to see if it is running on an OSX 
 
 Finally install [additional apps](https://docs.google.com/spreadsheets/d/16eFobpA2NCv6kvn_EGDvvYnCeUiotT8SwyTWuxP5CXc)
 
+## Terminal Capabilities
+
+In order to properly support italic fonts in and out of tmux, a couple of terminal capabilities need to be described. Run the following from the root of the project:
+
+```bash
+tic -x resources/xterm-256color-italic.terminfo
+tic -x resources/tmux.terminfo
+```
+
 ## ZSH Setup
 
 ZSH is configured in the `zshrc.symlink` file, which will be symlinked to the home directory. The following occurs in this file:

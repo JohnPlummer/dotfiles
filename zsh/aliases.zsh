@@ -40,11 +40,9 @@ alias clsym="find -L . -name . -o -type d -prune -o -type l -exec rm {} +"
 alias g='git'
 
 # tmux aliases
-alias ta='tmux attach'
 alias tls='tmux ls'
-alias tat='tmux attach -t'
-alias tns='tmux new-session -s'
-alias admin='tmux new-session -A -s admin'
+alias ts='tmux new-session -A -s'
+alias admin='ts admin'
 
 # config aliases
 alias zshconfig="vim $HOME/.zshrc"

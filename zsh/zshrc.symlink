@@ -46,10 +46,6 @@ zstyle ':completion:*' insert-tab pending
 # default to file completion
 zstyle ':completion:*' completer _expand _complete _files _correct _approximate
 
-# Search forward in the history for a line beginning with the current line up to the cursor
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
-
 # source all .zsh files inside of the zsh/ directory
 source "$DOTFILES/zsh/utils.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
@@ -75,10 +71,17 @@ zfetch $ZPLUGDIR chriskempson/base16-shell
 # Setup
 ########################################################
 
-# move to next word with ctrl-F
-bindkey -M viins "^F" vi-forward-word
-# Move to end of line with ctrl-E
+# Emacs-like bindings for insert mode (and terminal)
+bindkey -M viins "^A" beginning-of-line
 bindkey -M viins "^E" vi-add-eol
+bindkey -M viins "^K" kill-line
+bindkey -M viins "^U" backward-kill-line
+bindkey -M viins "^W" backward-kill-word
+bindkey -M viins "^Y" yank
+bindkey -M viins "^_" undo
+# forward / backword word more useful than forward / backward chor
+bindkey -M viins "^F" vi-forward-word
+bindkey -M viins "^B" vi-backward-word
 
 #z.lua
 eval "$(lua $DOTFILES/bin/z.lua --init zsh)"

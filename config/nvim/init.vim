@@ -21,6 +21,7 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/snippets.vim
+source $HOME/.config/nvim/plug-config/tabular.vim
 source $HOME/.config/nvim/plug-config/whichkey.vim
 
 " Themes

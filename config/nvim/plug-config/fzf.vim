@@ -1,5 +1,3 @@
-" FZF
-call minpac#add('junegunn/fzf.vim')
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>ph :FZFH<CR>

@@ -1,0 +1,1 @@
+nnoremap gh :GBrowse<CR>

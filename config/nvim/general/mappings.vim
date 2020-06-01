@@ -2,6 +2,8 @@
 
 " change the <leader> from \ to <space>
 let mapleader=" "
+" set the <localleader> to \
+let maplocalleader = "\\"
 
 " map jk to esc
 noremap! jk <Esc>

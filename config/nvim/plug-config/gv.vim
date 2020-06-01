@@ -1,4 +1,4 @@
 call minpac#add('junegunn/gv.vim')
 
-nnoremap <leader>gv :GV<CR>
-vnoremap <leader>gv :GV<CR>
+nnoremap gl :GV<CR>
+vnoremap gl :GV<CR>

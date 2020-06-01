@@ -51,7 +51,7 @@ nnoremap <silent> yos :set spell! spelllang=en_gb<CR>
 " ##################### More specific mappings #################################
 
 " Open journal file
-nnoremap <Leader>gt
+nnoremap gt
 	\ :e ~/Dropbox/markdown/<C-r>=strftime("%Y-%m-%d") . '.md'<cr><cr>G
 
 " ##################### Plugin specific mappings ###############################

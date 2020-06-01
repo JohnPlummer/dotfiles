@@ -5,4 +5,4 @@ call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-rhubarb')
 call minpac#add('tpope/vim-surround')
 
-nnoremap <leader>gh :GBrowse<CR>
+nnoremap gb :GBrowse<CR>

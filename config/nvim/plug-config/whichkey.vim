@@ -1,5 +1,3 @@
-call minpac#add('liuchengxu/vim-which-key')
-
 " `G` key map for Goto
 let g:goto_whichkey_map = {
      \ 'name' : 'goto',
@@ -10,13 +8,11 @@ let g:goto_whichkey_map = {
      \ 'd' : 'declaration',
      \ 'y' : 'type declaration',
      \ 't' : 'todays note',
-     \ 'f' : 'edit file',
-     \ 'x' : 'view file',
      \}
 
-nnoremap <silent> g :silent WhichKey 'g'<CR>
-vnoremap <silent> g :silent <c-u> :silent WhichKeyVisual 'g'<CR>
-call which_key#register('g', 'g:goto_whichkey_map')
+" nnoremap <silent> g :silent WhichKey 'g'<CR>
+" vnoremap <silent> g :silent <c-u> :silent WhichKeyVisual 'g'<CR>
+" call which_key#register('g', 'g:goto_whichkey_map')
 
 " Map leader to which_key
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>

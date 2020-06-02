@@ -1,5 +1,3 @@
-call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
-
 " Auto install extensions
 let g:coc_global_extensions = [
       \'coc-docker',

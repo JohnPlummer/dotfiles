@@ -1,19 +1,3 @@
-" `G` key map for Goto
-let g:goto_whichkey_map = {
-     \ 'name' : 'goto',
-     \ 'b' : 'browse (github)',
-     \ 'l' : '(git) log',
-     \ 'i' : 'implementation',
-     \ 'r' : 'references',
-     \ 'd' : 'declaration',
-     \ 'y' : 'type declaration',
-     \ 't' : 'todays note',
-     \}
-
-" nnoremap <silent> g :silent WhichKey 'g'<CR>
-" vnoremap <silent> g :silent <c-u> :silent WhichKeyVisual 'g'<CR>
-" call which_key#register('g', 'g:goto_whichkey_map')
-
 " Map leader to which_key
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>

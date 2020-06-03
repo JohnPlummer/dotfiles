@@ -2,8 +2,8 @@
 
 " change the <leader> from \ to <space>
 let mapleader=" "
-" set the <localleader> to \
-let maplocalleader = "\\"
+" set the <localleader> to `,`
+let maplocalleader = ","
 
 " map jk to esc
 noremap! jk <Esc>
@@ -18,8 +18,8 @@ nnoremap Q :
 " ##################### Make vim easier ########################################
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <localleader>ve :e $MYVIMRC<CR>
+nmap <silent> <localleader>vs :so $MYVIMRC<CR>
 
 " Toggle hlsearch with <leader>hs
 nmap <leader>hs :set hlsearch! hlsearch?<CR>

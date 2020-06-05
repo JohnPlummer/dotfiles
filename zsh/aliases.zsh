@@ -67,5 +67,6 @@ alias orderweb-production="ssh ecs@hopper-production orderweb web hopper-runner 
 alias orderweb-staging="ssh ecs@hopper-staging orderweb web hopper-runner --allow-service-overrides bundle exec rails c"
 alias shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner bundle exec rails c"
 alias ssh-shs-staging="ssh ecs@hopper-staging self-help-service web hopper-runner sh"
+alias ssh-c3-staging="ssh ecs@hopper-staging care-command-centre web hopper-runner sh"
 alias ssh-atlas-staging="ssh ecs@hopper-staging logistics-dashboard web hopper-runner sh"
 

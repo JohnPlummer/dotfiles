@@ -65,14 +65,14 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>cn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format-selected)
 " Formatting buffer
-xmap <leader>F  <Plug>(coc-format)
-nmap <leader>F  <Plug>(coc-format)
+xmap <leader>cF  <Plug>(coc-format)
+nmap <leader>cF  <Plug>(coc-format)
 
 augroup mygroup
   autocmd!
@@ -84,13 +84,13 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>ca  <Plug>(coc-codeaction-selected)
+nmap <leader>ca  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>cA   <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>cq  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -124,17 +124,17 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <localleader>cd  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
+nnoremap <silent> <localleader>ce  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+nnoremap <silent> <localleader>cc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 " nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
 " Search morketplace
-nnoremap <silent> <leader>cm :<C-u>CocList marketplace<cr>
+nnoremap <silent> <localleader>cm :<C-u>CocList marketplace<cr>
 " Do default action for next item.
 " nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -144,7 +144,7 @@ nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 
 let g:coc_snippet_next = '<tab>'
 
-nnoremap <leader>cs :CocCommand snippets.editSnippets<CR>
+nnoremap <localleader>cs :CocCommand snippets.editSnippets<CR>
 
 
-nmap <silent> <leader>rf <Plug>(coc-refactor)
+nmap <silent> <leader>cr <Plug>(coc-refactor)

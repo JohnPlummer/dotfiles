@@ -20,7 +20,7 @@ If on OSX, you will need to install the XCode CLI tools before continuing. To do
 ➜ xcode-select --install
 ```
 
-Then, clone the dotfiles repository to your home directory as `~/.dotfiles`. 
+Then, clone the dotfiles repository to your home directory as `~/.dotfiles`.
 
 ```bash
 ➜ git clone git@github.com:johnplummer/dotfiles.git ~/.dotfiles

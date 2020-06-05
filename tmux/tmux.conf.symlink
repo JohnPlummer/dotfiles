@@ -27,6 +27,11 @@ setw -g mouse on
 # reload config file
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
 
+# new panes should use pwd
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
 # pane movement shortcuts
 bind h select-pane -L
 bind j select-pane -D

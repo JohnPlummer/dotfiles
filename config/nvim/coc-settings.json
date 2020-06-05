@@ -1,6 +1,6 @@
 {
     "diagnostic.errorSign": "❌",
-    "diagnostic.warningSign": "⚠️",
+    "diagnostic.warningSign": "",
     "diagnostic.infoSign": "ℹ️",
 
     // markdown

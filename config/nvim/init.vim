@@ -2,11 +2,14 @@
 set nocompatible
 filetype plugin indent on
 
+source $HOME/.config/nvim/general/mappings.vim
+
 "######################## Install Plugins & Themes ############################
 " For Neovim: stdpath('data') . '/plugged'
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Asheq/close-buffers.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rizzatti/dash.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -21,6 +24,7 @@ Plug 'unblevable/quick-scope'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-signify'
 Plug 'honza/vim-snippets'
+Plug 'mhinz/vim-startify'
 Plug 'godlygeek/tabular'
 " Random Tim Pope plugins
 Plug 'tpope/vim-commentary'
@@ -36,6 +40,7 @@ call plug#end()
 
 "############################## Plugin Config #################################
 source $HOME/.config/nvim/plug-config/airline.vim
+source $HOME/.config/nvim/plug-config/close-buffers.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/dash.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
@@ -56,5 +61,4 @@ colorscheme nord
 
 "############################## Settings ######################################
 source $HOME/.config/nvim/general/functions.vim
-source $HOME/.config/nvim/general/mappings.vim
 source $HOME/.config/nvim/general/settings.vim

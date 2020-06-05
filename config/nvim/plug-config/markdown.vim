@@ -4,5 +4,5 @@ let g:vim_markdown_autowrite = 1 " ge to follow link writes file
 let g:vim_markdown_new_list_item_indent = 0
 set conceallevel=2
 
-nmap <leader>p <Plug>MarkdownPreview
+nmap gp <Plug>MarkdownPreview
 

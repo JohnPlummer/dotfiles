@@ -23,8 +23,9 @@ alias rmf="rm -rf"
 # Ranger
 alias r='ranger'
 
-# LazyDocker
+# Lazy...
 alias ld='lazydocker'
+alias lg='lazygit'
 
 # Helpers
 alias grep='grep --color=auto'

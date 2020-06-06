@@ -36,9 +36,6 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 # remove broken symlinks
 alias clsym="find -L . -name . -o -type d -prune -o -type l -exec rm {} +"
 
-# git aliases
-alias g='git'
-
 # tmux aliases
 alias tls='tmux ls'
 alias ts='tmux new-session -A -s'

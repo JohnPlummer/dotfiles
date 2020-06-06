@@ -24,7 +24,6 @@ Plug 'unblevable/quick-scope'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-signify'
 Plug 'honza/vim-snippets'
-Plug 'mhinz/vim-startify'
 Plug 'godlygeek/tabular'
 " Random Tim Pope plugins
 Plug 'tpope/vim-commentary'

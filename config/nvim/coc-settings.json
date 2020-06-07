@@ -3,6 +3,22 @@
     "diagnostic.warningSign": "",
     "diagnostic.infoSign": "ℹ️",
 
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "javascriptreact",
+        "css",
+        "markdown"
+    ],
+    "eslint.filetypes": [
+        "javascript",
+        "json",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact"
+    ],
     // markdown
     "markdownlint.config": {
         "default": true,

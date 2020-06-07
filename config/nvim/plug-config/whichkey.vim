@@ -7,9 +7,11 @@ vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 let g:which_key_leader_map.c = {
 			\'name':  '+code / coc',
 			\'a' :    'code action on selected',
-			\'A' :    'code action on buffer',
 			\'f' :    'format',
 			\'F' :    'format buffer',
+			\'j' :    'do default action for next item',
+			\'k' :    'do default action for previous item',
+			\'l' :    'code action on line',
 			\'n' :    'rename',
 			\'o' :    'outline',
 			\'q' :    'quickfix current line',
@@ -49,6 +51,7 @@ let g:which_key_localleader_map.c = {
 			\'e' :    'extensions',
 			\'m' :    'marketplace',
 			\'s' :    '(edit) snippets',
+			\'f' :    'config',
 			\}
 let g:which_key_localleader_map.p = {
 		       \'name':  '+plug',

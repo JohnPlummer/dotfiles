@@ -23,6 +23,8 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+let g:coc_snippet_next = '<tab>'
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -87,8 +89,8 @@ augroup end
 xmap <leader>ca  <Plug>(coc-codeaction-selected)
 nmap <leader>ca  <Plug>(coc-codeaction-selected)
 
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>cA   <Plug>(coc-codeaction)
+" Remap keys for applying codeAction to the current line.
+nmap <leader>cl   <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>cq  <Plug>(coc-fix-current)
 
@@ -108,6 +110,25 @@ omap ac <Plug>(coc-classobj-a)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Find symbol of current document.
+nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+" nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
+
+nmap <silent> <leader>cr <Plug>(coc-refactor)
+
+" Vim commands
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
@@ -117,34 +138,17 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Mappings using CoCList:
+" Manage Plugin uses local leader
 " Show all diagnostics.
 nnoremap <silent> <localleader>cd  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent> <localleader>ce  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent> <localleader>cc  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-" nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+" Edit snippets for current filetype
+nnoremap <localleader>cs :CocCommand snippets.editSnippets<CR>
+" Open config
+nnoremap <localleader>cf :CocConfig<CR>
 " Search morketplace
 nnoremap <silent> <localleader>cm :<C-u>CocList marketplace<cr>
-" Do default action for next item.
-" nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-" nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 
-let g:coc_snippet_next = '<tab>'
-
-nnoremap <localleader>cs :CocCommand snippets.editSnippets<CR>
-
-
-nmap <silent> <leader>cr <Plug>(coc-refactor)

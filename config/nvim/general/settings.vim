@@ -4,6 +4,15 @@ set clipboard+=unnamedplus
 " Line numbers
 set number 
 
+" Indentation
+filetype plugin indent on
+set autoindent
+set expandtab
+set shiftround
+set shiftwidth=2
+set tabstop=2
+set smarttab
+
 "####################### From the defoult Coc config ##########################
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.

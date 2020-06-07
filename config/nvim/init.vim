@@ -1,6 +1,5 @@
 " Backwards compatible
 set nocompatible
-filetype plugin indent on
 
 source $HOME/.config/nvim/general/mappings.vim
 

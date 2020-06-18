@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
       \'coc-json',
       \'coc-markdownlint',
       \'coc-marketplace',
+      \'coc-metals',
       \'coc-prettier',
       \'coc-snippets',
       \'coc-solargraph',
@@ -127,6 +128,19 @@ nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 
 nmap <silent> <leader>cr <Plug>(coc-refactor)
+
+" Expand text on Scala work sheet
+nmap <Leader>cs <Plug>(coc-metals-expand-decoration)
+" Toggle panel with Tree Views
+nnoremap <silent> <leader>ct :<C-u>CocCommand metals.tvp<CR>
+" Toggle Tree View 'metalsPackages'
+" nnoremap <silent> <space>tp :<C-u>CocCommand metals.tvp metalsPackages<CR>
+" Toggle Tree View 'metalsCompile'
+" nnoremap <silent> <space>tc :<C-u>CocCommand metals.tvp metalsCompile<CR>
+" Toggle Tree View 'metalsBuild'
+" nnoremap <silent> <space>tb :<C-u>CocCommand metals.tvp metalsBuild<CR>
+" Reveal current current class (trait or object) in Tree View 'metalsPackages'
+" nnoremap <silent> <space>tf :<C-u>CocCommand metals.revealInTreeView metalsPackages<CR>
 
 " Vim commands
 " Add `:Format` command to format current buffer.

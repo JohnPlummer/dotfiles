@@ -12,6 +12,8 @@ if [[ -d $HOME/Dropbox/code ]]; then
     export CODE_DIR=$HOME/Dropbox/code
 fi
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) 
+
 # display how long all tasks over 10 seconds take
 export REPORTTIME=10
 

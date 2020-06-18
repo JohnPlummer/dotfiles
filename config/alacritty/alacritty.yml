@@ -12,6 +12,8 @@ key_bindings:
     - { key: Minus,   mods: Super,  action: DecreaseFontSize }
     - { key: Equals,  mods: Super,  action: IncreaseFontSize }
     - { key: Key0,    mods: Super,  action: ResetFontSize }
+    # prevent cmd w from clasing window
+    - { key: W,       mods: Super,  action: ResetFontSize }
     - {
           key: Comma,
           mods: Command,

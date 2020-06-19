@@ -54,6 +54,8 @@
     fa = fetch --all
     pa = push --all
     pt = push --tags
+    # set remote to origin/branch_name
+    pushu = push -u origin HEAD
     b = branch
     ho = open
 

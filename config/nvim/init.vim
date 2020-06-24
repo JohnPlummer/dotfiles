@@ -4,6 +4,12 @@ set nocompatible
 source $HOME/.config/nvim/general/mappings.vim
 
 "######################## Install Plugins & Themes ############################
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " For Neovim: stdpath('data') . '/plugged'
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'vim-airline/vim-airline'

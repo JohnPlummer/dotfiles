@@ -1,10 +1,10 @@
 # gitconfig
 [user]
-    name = John Plummer
-    email = john@memphis.co.uk
+	name = John Plummer
+	email = john@memphis.co.uk
     signingkey = 21863237ECE91781
 [github]
-    user = JohnPlummer
+	user = JohnPlummer
 [url "git@github.com:"]
     insteadOf = https://github.com/
 [core]
@@ -22,7 +22,7 @@
 [pull]
     rebase = true
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 [commit]
     gpgsign = true
 [gpg]

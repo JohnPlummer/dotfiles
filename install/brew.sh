@@ -22,6 +22,7 @@ formulas=(
     rbenv
     ripgrep
     ruby-build
+    sbt
     tmux
     tree
     wget
@@ -38,6 +39,27 @@ for formula in "${formulas[@]}"; do
         brew install "$formula"
     fi
 done
+
+cask_formulas=(
+  alacritty
+)
+
+for formula in "${cask_formulas[@]}"; do
+    formula_name=$( echo "$formula" | awk '{print $1}' )
+    if brew cask list "$formula_name" > /dev/null 2>&1; then
+        echo "$formula_name already installed... skipping."
+    else
+        brew cask install "$formula"
+    fi
+done
+
+formula_name="adoptopenjdk8"
+if brew cask list "$formula_name" > /dev/null 2>&1; then
+    echo "$formula_name already installed... skipping."
+else
+    brew tap AdoptOpenJDK/openjdk
+    brew cask install "$formula_name"
+fi
 
 # after the install, install neovim python libraries
 echo -e "\\n\\nRunning Neovim Python install"

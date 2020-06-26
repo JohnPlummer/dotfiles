@@ -4,6 +4,9 @@ npm-debug.log
 **/*.log
 plug.vim.old
 
+tmux/tmux.symlink/*
+!tmux/tmux.symlink/plugins/tpm
+
 config/nvim/sessions
 config/nvim/spell
 config/nvim/shada

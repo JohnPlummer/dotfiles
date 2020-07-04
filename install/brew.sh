@@ -42,6 +42,7 @@ done
 
 cask_formulas=(
   alacritty
+  vlc
 )
 
 for formula in "${cask_formulas[@]}"; do

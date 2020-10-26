@@ -11,8 +11,7 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias cdh='cd $CODE_DIR/home'
-alias cdgh='cd $CODE_DIR/home/go/src/github.com/johnplummer'
+alias cdc='cd $CODE_DIR'
 
 alias l="ls -lah ${colorflag}"
 alias la="ls -AF ${colorflag}"
@@ -58,8 +57,7 @@ alias testff='bundle exec rspec --next-failure'
 
 
 # work aliases
-alias cdgw='cd $CODE_DIR/deliveroo/go/src/github.com/deliveroo'
-alias cdw='cd $CODE_DIR/deliveroo'
+alias cdr='cd $ROO_CODE_DIR'
 alias shs-production="ssh ecs@hopper-production self-help-service web hopper-runner bundle exec rails c"
 alias orderweb-production="ssh ecs@hopper-production orderweb web hopper-runner --allow-service-overrides bundle exec rails c"
 alias orderweb-staging="ssh ecs@hopper-staging orderweb web hopper-runner --allow-service-overrides bundle exec rails c"

@@ -8,8 +8,13 @@ export VIMDATA=$HOME/.local/share/nvim
 export ZSH=$DOTFILES/zsh
 
 # define the code directory
-if [[ -d $HOME/Dropbox/code ]]; then
-    export CODE_DIR=$HOME/Dropbox/code
+if [[ -d $HOME/code ]]; then
+    export CODE_DIR=$HOME/code
+fi
+
+# define the work code directory
+if [[ -d $HOME/roo-code ]]; then
+    export CODE_DIR=$HOME/roo-code
 fi
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) 

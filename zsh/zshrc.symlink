@@ -100,7 +100,7 @@ eval "$(rbenv init -)"
 # Install tools to $HOME/golib
 export GOPATH=$HOME/golib
 prepend_path $GOPATH/bin
-export GOPATH=$GOPATH:$CODE_DIR/home/go:$CODE_DIR/deliveroo/go
+export GOPATH=$GOPATH:$CODE_DIR/go:$ROO_CODE_DIR/go
 
 # Staging reset script
 export STAGING_RESET_GITHUB_TOKEN=this-should-be-in-.localrc

@@ -14,7 +14,7 @@ fi
 
 # define the work code directory
 if [[ -d $HOME/roo-code ]]; then
-    export CODE_DIR=$HOME/roo-code
+    export ROO_CODE_DIR=$HOME/roo-code
 fi
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) 

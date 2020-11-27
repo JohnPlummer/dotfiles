@@ -17,6 +17,10 @@ if [[ -d $HOME/roo-code ]]; then
     export ROO_CODE_DIR=$HOME/roo-code
 fi
 
+# env for AWS SSM access
+export AWS_REGION=eu-west-1
+export AWS_PROFILE=saml
+
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) 
 
 # display how long all tasks over 10 seconds take

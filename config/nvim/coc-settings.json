@@ -7,7 +7,6 @@
         "javascript",
         "typescript",
         "typescriptreact",
-        "json",
         "javascriptreact",
         "css",
         "markdown"
@@ -19,6 +18,8 @@
         "typescriptreact",
         "javascriptreact"
     ],
+    // javascript
+    "prettier.eslintIntegration": true,
     // markdown
     "markdownlint.config": {
         "default": true,
